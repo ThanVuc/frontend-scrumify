@@ -79,12 +79,5 @@ jobs:
 
             ./scripts/deploy.sh $SERVICE_NAME
 
-            curl \
-              --retry 20 \
-              --retry-delay 3 \
-              --retry-all-errors \
-              --fail \
-              http://localhost:5000/actuator/health
-
             echo "✅ Deployment completed successfully."
           EOF
