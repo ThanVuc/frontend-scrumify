@@ -1,0 +1,76 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "table": {
+            "header": {
+                "height": {
+                    "$value": "44px"
+                },
+                "paddingX": {
+                    "$value": "{spacing.4}"
+                },
+                "background": {
+                    "$value": "{color.semantic.surface.default}"
+                },
+                "foreground": {
+                    "$value": "{color.semantic.text.secondary}"
+                },
+                "typography": {
+                    "fontFamily": { "$value": "{typography.semantic.label.fontFamily}" },
+                    "fontSize": { "$value": "{typography.semantic.label.fontSize}" },
+                    "fontWeight": { "$value": "{typography.semantic.label.fontWeight}" },
+                    "lineHeight": { "$value": "{typography.semantic.label.lineHeight}" },
+                    "letterSpacing": { "$value": "{typography.semantic.label.letterSpacing}" }
+                }
+            },
+            "row": {
+                "height": {
+                    "$value": "48px"
+                },
+                "paddingX": {
+                    "$value": "{spacing.4}"
+                },
+                "background": {
+                    "default": {
+                        "$value": "{color.semantic.background.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.semantic.surface.hover}"
+                    },
+                    "selected": {
+                        "$value": "{color.semantic.surface.active}"
+                    }
+                },
+                "foreground": {
+                    "$value": "{color.semantic.text.primary}"
+                }
+            },
+            "cell": {
+                "paddingX": {
+                    "$value": "{spacing.4}"
+                },
+                "paddingY": {
+                    "$value": "{spacing.3}"
+                },
+                "typography": {
+                    "fontFamily": { "$value": "{typography.semantic.body.fontFamily}" },
+                    "fontSize": { "$value": "{typography.semantic.body.fontSize}" },
+                    "fontWeight": { "$value": "{typography.semantic.body.fontWeight}" },
+                    "lineHeight": { "$value": "{typography.semantic.body.lineHeight}" },
+                    "letterSpacing": { "$value": "{typography.semantic.body.letterSpacing}" }
+                }
+            },
+            "border": {
+                "width": {
+                    "$value": "{border.width.default}"
+                },
+                "color": {
+                    "$value": "{color.semantic.border.subtle}"
+                }
+            },
+            "radius": {
+                "$value": "{radius.md}"
+            }
+        }
+    }
+}

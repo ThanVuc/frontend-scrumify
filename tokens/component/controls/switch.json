@@ -1,0 +1,92 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "switch": {
+            "size": {
+                "sm": {
+                    "width": {
+                        "$value": "32px"
+                    },
+                    "height": {
+                        "$value": "20px"
+                    },
+                    "thumbSize": {
+                        "$value": "16px"
+                    },
+                    "padding": {
+                        "$value": "2px"
+                    }
+                },
+                "md": {
+                    "width": {
+                        "$value": "40px"
+                    },
+                    "height": {
+                        "$value": "24px"
+                    },
+                    "thumbSize": {
+                        "$value": "20px"
+                    },
+                    "padding": {
+                        "$value": "2px"
+                    }
+                },
+                "lg": {
+                    "width": {
+                        "$value": "48px"
+                    },
+                    "height": {
+                        "$value": "28px"
+                    },
+                    "thumbSize": {
+                        "$value": "24px"
+                    },
+                    "padding": {
+                        "$value": "2px"
+                    }
+                }
+            },
+            "radius": {
+                "$value": "{radius.full}"
+            },
+            "background": {
+                "default": {
+                    "$value": "{color.semantic.surface.active}"
+                },
+                "checked": {
+                    "$value": "{color.semantic.action.primary.default}"
+                },
+                "disabled": {
+                    "$value": "{color.semantic.surface.active}"
+                }
+            },
+            "thumb": {
+                "background": {
+                    "$value": "{color.semantic.text.inverse}"
+                },
+                "disabled": {
+                    "$value": "{color.semantic.text.disabled}"
+                }
+            },
+            "focus": {
+                "outlineWidth": {
+                    "$value": "{component.control.focus.outlineWidth}"
+                },
+                "outlineOffset": {
+                    "$value": "{component.control.focus.outlineOffset}"
+                },
+                "color": {
+                    "$value": "{component.control.focus.color}"
+                }
+            },
+            "motion": {
+                "duration": {
+                    "$value": "{component.control.motion.duration}"
+                },
+                "easing": {
+                    "$value": "{component.control.motion.easing}"
+                }
+            }
+        }
+    }
+}

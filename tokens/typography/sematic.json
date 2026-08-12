@@ -1,0 +1,126 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "typography": {
+        "semantic": {
+            "display": {
+                "fontFamily": {
+                    "$value": "{typography.font.family.sans}"
+                },
+                "fontSize": {
+                    "$value": "{typography.scale.5xl.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.font.weight.bold}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.scale.5xl.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.letterSpacing.tight}"
+                }
+            },
+            "heading": {
+                "fontFamily": {
+                    "$value": "{typography.font.family.sans}"
+                },
+                "fontSize": {
+                    "$value": "{typography.scale.3xl.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.font.weight.semibold}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.scale.3xl.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.letterSpacing.tight}"
+                }
+            },
+            "title": {
+                "fontFamily": {
+                    "$value": "{typography.font.family.sans}"
+                },
+                "fontSize": {
+                    "$value": "{typography.scale.xl.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.font.weight.semibold}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.scale.xl.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.letterSpacing.normal}"
+                }
+            },
+            "body": {
+                "fontFamily": {
+                    "$value": "{typography.font.family.sans}"
+                },
+                "fontSize": {
+                    "$value": "{typography.scale.md.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.font.weight.regular}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.scale.md.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.letterSpacing.normal}"
+                }
+            },
+            "label": {
+                "fontFamily": {
+                    "$value": "{typography.font.family.sans}"
+                },
+                "fontSize": {
+                    "$value": "{typography.scale.sm.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.font.weight.semibold}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.scale.sm.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.letterSpacing.wide}"
+                }
+            },
+            "caption": {
+                "fontFamily": {
+                    "$value": "{typography.font.family.sans}"
+                },
+                "fontSize": {
+                    "$value": "{typography.scale.xs.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.font.weight.medium}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.scale.xs.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.letterSpacing.wide}"
+                }
+            },
+            "mono": {
+                "fontFamily": {
+                    "$value": "{typography.font.family.mono}"
+                },
+                "fontSize": {
+                    "$value": "{typography.scale.sm.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.font.weight.regular}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.scale.sm.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.letterSpacing.normal}"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "checkbox": {
+            "size": {
+                "sm": {
+                    "$value": "14px"
+                },
+                "md": {
+                    "$value": "16px"
+                },
+                "lg": {
+                    "$value": "20px"
+                }
+            },
+            "radius": {
+                "$value": "{radius.sm}"
+            },
+            "border": {
+                "width": {
+                    "$value": "{border.width.default}"
+                },
+                "color": {
+                    "$value": "{color.semantic.border.default}"
+                },
+                "focusWidth": {
+                    "$value": "{component.control.focus.outlineWidth}"
+                }
+            },
+            "background": {
+                "default": {
+                    "$value": "{color.semantic.surface.default}"
+                },
+                "checked": {
+                    "$value": "{color.semantic.action.primary.default}"
+                },
+                "disabled": {
+                    "$value": "{color.semantic.surface.active}"
+                }
+            },
+            "foreground": {
+                "checked": {
+                    "$value": "{color.semantic.action.primary.foreground}"
+                },
+                "disabled": {
+                    "$value": "{color.semantic.text.disabled}"
+                }
+            },
+            "focus": {
+                "outlineWidth": {
+                    "$value": "{component.control.focus.outlineWidth}"
+                },
+                "outlineOffset": {
+                    "$value": "{component.control.focus.outlineOffset}"
+                },
+                "color": {
+                    "$value": "{component.control.focus.color}"
+                }
+            },
+            "icon": {
+                "size": {
+                    "$value": "{icon.size.sm}"
+                },
+                "color": {
+                    "$value": "{color.semantic.action.primary.foreground}"
+                }
+            },
+            "motion": {
+                "duration": {
+                    "$value": "{component.control.motion.duration}"
+                },
+                "easing": {
+                    "$value": "{component.control.motion.easing}"
+                }
+            }
+        }
+    }
+}

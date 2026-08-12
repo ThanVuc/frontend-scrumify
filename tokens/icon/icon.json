@@ -1,0 +1,50 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "icon": {
+        "size": {
+            "xs": {
+                "$value": "12px"
+            },
+            "sm": {
+                "$value": "14px"
+            },
+            "md": {
+                "$value": "16px"
+            },
+            "lg": {
+                "$value": "20px"
+            },
+            "xl": {
+                "$value": "24px"
+            },
+            "2xl": {
+                "$value": "32px"
+            }
+        },
+        "strokeWidth": {
+            "default": {
+                "$value": "1.5px"
+            },
+            "strong": {
+                "$value": "2px"
+            }
+        },
+        "color": {
+            "default": {
+                "$value": "{color.semantic.text.secondary}"
+            },
+            "muted": {
+                "$value": "{color.semantic.text.muted}"
+            },
+            "disabled": {
+                "$value": "{color.semantic.text.disabled}"
+            },
+            "inverse": {
+                "$value": "{color.semantic.text.inverse}"
+            },
+            "interactive": {
+                "$value": "{color.semantic.action.primary.default}"
+            }
+        }
+    }
+}

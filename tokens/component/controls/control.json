@@ -1,0 +1,70 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "control": {
+            "height": {
+                "sm": {
+                    "$value": "36px"
+                },
+                "md": {
+                    "$value": "40px"
+                },
+                "lg": {
+                    "$value": "48px"
+                }
+            },
+            "paddingX": {
+                "sm": {
+                    "$value": "{spacing.3}"
+                },
+                "md": {
+                    "$value": "{spacing.4}"
+                },
+                "lg": {
+                    "$value": "{spacing.5}"
+                }
+            },
+            "gap": {
+                "sm": {
+                    "$value": "{spacing.2}"
+                },
+                "md": {
+                    "$value": "{spacing.2}"
+                },
+                "lg": {
+                    "$value": "{spacing.3}"
+                }
+            },
+            "radius": {
+                "$value": "{radius.md}"
+            },
+            "border": {
+                "width": {
+                    "$value": "{border.width.default}"
+                },
+                "focusWidth": {
+                    "$value": "{border.width.focus}"
+                }
+            },
+            "focus": {
+                "outlineWidth": {
+                    "$value": "{border.width.focus}"
+                },
+                "outlineOffset": {
+                    "$value": "{spacing.1}"
+                },
+                "color": {
+                    "$value": "{color.semantic.border.focus}"
+                }
+            },
+            "motion": {
+                "duration": {
+                    "$value": "{motion.duration.fast}"
+                },
+                "easing": {
+                    "$value": "{motion.easing.standard}"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "layout": {
+        "container": {
+            "maxWidth": {
+                "$value": "1200px"
+            }
+        },
+        "gutter": {
+            "mobile": {
+                "$value": "{spacing.4}"
+            },
+            "tablet": {
+                "$value": "{spacing.5}"
+            },
+            "laptop": {
+                "$value": "{spacing.6}"
+            },
+            "desktop": {
+                "$value": "{spacing.8}"
+            }
+        },
+        "pageMargin": {
+            "mobile": {
+                "$value": "{spacing.5}"
+            },
+            "tablet": {
+                "$value": "{spacing.8}"
+            },
+            "laptop": {
+                "$value": "{spacing.12}"
+            },
+            "desktop": {
+                "$value": "{spacing.16}"
+            }
+        },
+        "breakpoint": {
+            "sm": {
+                "$value": "640px"
+            },
+            "md": {
+                "$value": "768px"
+            },
+            "lg": {
+                "$value": "1024px"
+            },
+            "xl": {
+                "$value": "1280px"
+            },
+            "2xl": {
+                "$value": "1536px"
+            }
+        }
+    }
+}

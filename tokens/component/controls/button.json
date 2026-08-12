@@ -1,0 +1,192 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "button": {
+            "size": {
+                "sm": {
+                    "height": {
+                        "$value": "{component.control.height.sm}"
+                    },
+                    "paddingX": {
+                        "$value": "{component.control.paddingX.sm}"
+                    },
+                    "gap": {
+                        "$value": "{component.control.gap.sm}"
+                    },
+                    "iconSize": {
+                        "$value": "{icon.size.sm}"
+                    }
+                },
+                "md": {
+                    "height": {
+                        "$value": "{component.control.height.md}"
+                    },
+                    "paddingX": {
+                        "$value": "{component.control.paddingX.md}"
+                    },
+                    "gap": {
+                        "$value": "{component.control.gap.md}"
+                    },
+                    "iconSize": {
+                        "$value": "{icon.size.md}"
+                    }
+                },
+                "lg": {
+                    "height": {
+                        "$value": "{component.control.height.lg}"
+                    },
+                    "paddingX": {
+                        "$value": "{component.control.paddingX.lg}"
+                    },
+                    "gap": {
+                        "$value": "{component.control.gap.lg}"
+                    },
+                    "iconSize": {
+                        "$value": "{icon.size.lg}"
+                    }
+                }
+            },
+            "typography": {
+                "fontFamily": {
+                    "$value": "{typography.semantic.label.fontFamily}"
+                },
+                "fontSize": {
+                    "$value": "{typography.semantic.label.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.semantic.label.fontWeight}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.semantic.label.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.semantic.label.letterSpacing}"
+                }
+            },
+            "radius": {
+                "$value": "{component.control.radius}"
+            },
+            "border": {
+                "width": {
+                    "$value": "{component.control.border.width}"
+                },
+                "focusWidth": {
+                    "$value": "{component.control.border.focusWidth}"
+                }
+            },
+            "motion": {
+                "duration": {
+                    "$value": "{component.control.motion.duration}"
+                },
+                "easing": {
+                    "$value": "{component.control.motion.easing}"
+                }
+            },
+            "primary": {
+                "background": {
+                    "default": {
+                        "$value": "{color.semantic.action.primary.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.semantic.action.primary.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.semantic.action.primary.active}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.surface.active}"
+                    }
+                },
+                "foreground": {
+                    "default": {
+                        "$value": "{color.semantic.action.primary.foreground}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.text.disabled}"
+                    }
+                },
+                "border": {
+                    "default": {
+                        "$value": "transparent"
+                    },
+                    "focus": {
+                        "$value": "{color.semantic.border.focus}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.border.disabled}"
+                    }
+                }
+            },
+            "secondary": {
+                "background": {
+                    "default": {
+                        "$value": "{color.semantic.action.secondary.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.semantic.action.secondary.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.semantic.action.secondary.active}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.surface.active}"
+                    }
+                },
+                "foreground": {
+                    "default": {
+                        "$value": "{color.semantic.action.secondary.foreground}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.text.disabled}"
+                    }
+                },
+                "border": {
+                    "default": {
+                        "$value": "{color.semantic.border.default}"
+                    },
+                    "focus": {
+                        "$value": "{color.semantic.border.focus}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.border.disabled}"
+                    }
+                }
+            },
+            "destructive": {
+                "background": {
+                    "default": {
+                        "$value": "{color.semantic.action.destructive.default}"
+                    },
+                    "hover": {
+                        "$value": "{color.semantic.action.destructive.hover}"
+                    },
+                    "active": {
+                        "$value": "{color.semantic.action.destructive.active}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.surface.active}"
+                    }
+                },
+                "foreground": {
+                    "default": {
+                        "$value": "{color.semantic.action.destructive.foreground}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.text.disabled}"
+                    }
+                },
+                "border": {
+                    "default": {
+                        "$value": "transparent"
+                    },
+                    "focus": {
+                        "$value": "{color.semantic.border.focus}"
+                    },
+                    "disabled": {
+                        "$value": "{color.semantic.border.disabled}"
+                    }
+                }
+            }
+        }
+    }
+}

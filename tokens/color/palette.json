@@ -1,0 +1,77 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "color": {
+    "palette": {
+      "neutral": {
+        "0": { "$value": "#ffffff" },
+        "50": { "$value": "#f5f5f5" },
+        "100": { "$value": "#e5e5e5" },
+        "150": { "$value": "#dcdcdc" },
+        "200": { "$value": "#d4d4d4" },
+        "300": { "$value": "#a3a3a3" },
+        "400": { "$value": "#737373" },
+        "500": { "$value": "#525252" },
+        "600": { "$value": "#404040" },
+        "700": { "$value": "#303030" },
+        "800": { "$value": "#262626" },
+        "850": { "$value": "#212121" },
+        "900": { "$value": "#1c1c1c" },
+        "950": { "$value": "#141414" },
+        "975": { "$value": "#0f0f0f" },
+        "990": { "$value": "#0a0a0a" }
+      },
+
+      "blue": {
+        "50": { "$value": "#eff6ff" },
+        "100": { "$value": "#dbeafe" },
+        "200": { "$value": "#bfdbfe" },
+        "300": { "$value": "#93c5fd" },
+        "400": { "$value": "#60a5fa" },
+        "500": { "$value": "#4f7cff" },
+        "600": { "$value": "#3f6fff" },
+        "700": { "$value": "#3158d4" },
+        "800": { "$value": "#2948aa" },
+        "900": { "$value": "#233e8f" }
+      },
+
+      "green": {
+        "50": { "$value": "#f0fdf4" },
+        "100": { "$value": "#dcfce7" },
+        "200": { "$value": "#bbf7d0" },
+        "300": { "$value": "#86efac" },
+        "400": { "$value": "#4ade80" },
+        "500": { "$value": "#22c55e" },
+        "600": { "$value": "#16a34a" },
+        "700": { "$value": "#15803d" },
+        "800": { "$value": "#166534" },
+        "900": { "$value": "#14532d" }
+      },
+
+      "amber": {
+        "50": { "$value": "#fffbeb" },
+        "100": { "$value": "#fef3c7" },
+        "200": { "$value": "#fde68a" },
+        "300": { "$value": "#fcd34d" },
+        "400": { "$value": "#fbbf24" },
+        "500": { "$value": "#f59e0b" },
+        "600": { "$value": "#d97706" },
+        "700": { "$value": "#b45309" },
+        "800": { "$value": "#92400e" },
+        "900": { "$value": "#78350f" }
+      },
+
+      "red": {
+        "50": { "$value": "#fef2f2" },
+        "100": { "$value": "#fee2e2" },
+        "200": { "$value": "#fecaca" },
+        "300": { "$value": "#fca5a5" },
+        "400": { "$value": "#f87171" },
+        "500": { "$value": "#ef4444" },
+        "600": { "$value": "#dc2626" },
+        "700": { "$value": "#b91c1c" },
+        "800": { "$value": "#991b1b" },
+        "900": { "$value": "#7f1d1d" }
+      }
+    }
+  }
+}

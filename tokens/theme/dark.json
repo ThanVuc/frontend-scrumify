@@ -1,0 +1,149 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "color": {
+        "semantic": {
+            "background": {
+                "default": {
+                    "$value": "{color.palette.neutral.990}"
+                },
+                "subtle": {
+                    "$value": "{color.palette.neutral.950}"
+                }
+            },
+            "surface": {
+                "default": {
+                    "$value": "{color.palette.neutral.975}"
+                },
+                "raised": {
+                    "$value": "{color.palette.neutral.950}"
+                },
+                "hover": {
+                    "$value": "{color.palette.neutral.800}"
+                },
+                "active": {
+                    "$value": "{color.palette.neutral.850}"
+                }
+            },
+            "text": {
+                "primary": {
+                    "$value": "{color.palette.neutral.50}"
+                },
+                "secondary": {
+                    "$value": "{color.palette.neutral.300}"
+                },
+                "muted": {
+                    "$value": "{color.palette.neutral.400}"
+                },
+                "disabled": {
+                    "$value": "{color.palette.neutral.700}"
+                },
+                "inverse": {
+                    "$value": "{color.palette.neutral.990}"
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.palette.neutral.700}"
+                },
+                "subtle": {
+                    "$value": "{color.palette.neutral.800}"
+                },
+                "strong": {
+                    "$value": "{color.palette.neutral.500}"
+                },
+                "focus": {
+                    "$value": "{color.palette.blue.500}"
+                },
+                "disabled": {
+                    "$value": "{color.palette.neutral.700}"
+                },
+                "destructive": {
+                    "$value": "{color.palette.red.500}"
+                }
+            },
+            "action": {
+                "primary": {
+                    "default": {
+                        "$value": "{color.palette.blue.500}"
+                    },
+                    "hover": {
+                        "$value": "{color.palette.blue.600}"
+                    },
+                    "active": {
+                        "$value": "{color.palette.blue.700}"
+                    },
+                    "foreground": {
+                        "$value": "{color.palette.neutral.0}"
+                    }
+                },
+                "secondary": {
+                    "default": {
+                        "$value": "{color.palette.neutral.200}"
+                    },
+                    "hover": {
+                        "$value": "{color.palette.neutral.150}"
+                    },
+                    "active": {
+                        "$value": "{color.palette.neutral.100}"
+                    },
+                    "foreground": {
+                        "$value": "{color.palette.neutral.990}"
+                    }
+                },
+                "destructive": {
+                    "default": {
+                        "$value": "{color.palette.red.500}"
+                    },
+                    "hover": {
+                        "$value": "{color.palette.red.600}"
+                    },
+                    "active": {
+                        "$value": "{color.palette.red.700}"
+                    },
+                    "foreground": {
+                        "$value": "{color.palette.neutral.0}"
+                    }
+                }
+            },
+            "status": {
+                "success": {
+                    "default": {
+                        "$value": "{color.palette.green.500}"
+                    },
+                    "foreground": {
+                        "$value": "{color.palette.neutral.0}"
+                    }
+                },
+                "warning": {
+                    "default": {
+                        "$value": "{color.palette.amber.500}"
+                    },
+                    "foreground": {
+                        "$value": "{color.palette.neutral.990}"
+                    }
+                },
+                "error": {
+                    "default": {
+                        "$value": "{color.palette.red.500}"
+                    },
+                    "foreground": {
+                        "$value": "{color.palette.neutral.0}"
+                    }
+                },
+                "info": {
+                    "default": {
+                        "$value": "{color.palette.blue.500}"
+                    },
+                    "foreground": {
+                        "$value": "{color.palette.neutral.0}"
+                    }
+                }
+            },
+            "overlay": {
+                "default": {
+                    "$value": "rgba(0, 0, 0, 0.6)"
+                }
+            }
+        }
+    }
+}

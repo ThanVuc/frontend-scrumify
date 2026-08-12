@@ -1,0 +1,54 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "dialog": {
+            "width": {
+                "sm": {
+                    "$value": "400px"
+                },
+                "md": {
+                    "$value": "640px"
+                },
+                "lg": {
+                    "$value": "800px"
+                }
+            },
+            "padding": {
+                "$value": "{spacing.8}"
+            },
+            "radius": {
+                "$value": "{radius.lg}"
+            },
+            "background": {
+                "$value": "{color.semantic.surface.raised}"
+            },
+            "foreground": {
+                "$value": "{color.semantic.text.primary}"
+            },
+            "border": {
+                "width": {
+                    "$value": "{border.width.default}"
+                },
+                "color": {
+                    "$value": "{color.semantic.border.default}"
+                }
+            },
+            "shadow": {
+                "$value": "{shadow.md}"
+            },
+            "overlay": {
+                "background": {
+                    "$value": "{color.semantic.overlay.default}"
+                }
+            },
+            "motion": {
+                "duration": {
+                    "$value": "{motion.duration.normal}"
+                },
+                "easing": {
+                    "$value": "{motion.easing.standard}"
+                }
+            }
+        }
+    }
+}

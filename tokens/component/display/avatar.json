@@ -1,0 +1,100 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "avatar": {
+            "size": {
+                "xs": {
+                    "$value": "24px"
+                },
+                "sm": {
+                    "$value": "32px"
+                },
+                "md": {
+                    "$value": "40px"
+                },
+                "lg": {
+                    "$value": "48px"
+                },
+                "xl": {
+                    "$value": "64px"
+                }
+            },
+            "radius": {
+                "$value": "{radius.full}"
+            },
+            "background": {
+                "$value": "{color.semantic.surface.active}"
+            },
+            "foreground": {
+                "$value": "{color.semantic.text.primary}"
+            },
+            "fallback": {
+                "background": {
+                    "$value": "{color.semantic.surface.active}"
+                },
+                "foreground": {
+                    "$value": "{color.semantic.text.primary}"
+                },
+                "typography": {
+                    "xs": {
+                        "fontFamily": { "$value": "{typography.semantic.caption.fontFamily}" },
+                        "fontSize": { "$value": "{typography.semantic.caption.fontSize}" },
+                        "fontWeight": { "$value": "{typography.semantic.caption.fontWeight}" },
+                        "lineHeight": { "$value": "{typography.semantic.caption.lineHeight}" },
+                        "letterSpacing": { "$value": "{typography.semantic.caption.letterSpacing}" }
+                    },
+                    "sm": {
+                        "fontFamily": { "$value": "{typography.semantic.caption.fontFamily}" },
+                        "fontSize": { "$value": "{typography.semantic.caption.fontSize}" },
+                        "fontWeight": { "$value": "{typography.semantic.caption.fontWeight}" },
+                        "lineHeight": { "$value": "{typography.semantic.caption.lineHeight}" },
+                        "letterSpacing": { "$value": "{typography.semantic.caption.letterSpacing}" }
+                    },
+                    "md": {
+                        "fontFamily": { "$value": "{typography.semantic.body.fontFamily}" },
+                        "fontSize": { "$value": "{typography.semantic.body.fontSize}" },
+                        "fontWeight": { "$value": "{typography.semantic.body.fontWeight}" },
+                        "lineHeight": { "$value": "{typography.semantic.body.lineHeight}" },
+                        "letterSpacing": { "$value": "{typography.semantic.body.letterSpacing}" }
+                    },
+                    "lg": {
+                        "fontFamily": { "$value": "{typography.semantic.title.fontFamily}" },
+                        "fontSize": { "$value": "{typography.semantic.title.fontSize}" },
+                        "fontWeight": { "$value": "{typography.semantic.title.fontWeight}" },
+                        "lineHeight": { "$value": "{typography.semantic.title.lineHeight}" },
+                        "letterSpacing": { "$value": "{typography.semantic.title.letterSpacing}" }
+                    },
+                    "xl": {
+                        "fontFamily": { "$value": "{typography.semantic.heading.fontFamily}" },
+                        "fontSize": { "$value": "{typography.semantic.heading.fontSize}" },
+                        "fontWeight": { "$value": "{typography.semantic.heading.fontWeight}" },
+                        "lineHeight": { "$value": "{typography.semantic.heading.lineHeight}" },
+                        "letterSpacing": { "$value": "{typography.semantic.heading.letterSpacing}" }
+                    }
+                }
+            },
+            "status": {
+                "size": {
+                    "xs": {
+                        "$value": "6px"
+                    },
+                    "sm": {
+                        "$value": "8px"
+                    },
+                    "md": {
+                        "$value": "10px"
+                    },
+                    "lg": {
+                        "$value": "12px"
+                    },
+                    "xl": {
+                        "$value": "14px"
+                    }
+                },
+                "borderWidth": {
+                    "$value": "{border.width.default}"
+                }
+            }
+        }
+    }
+}

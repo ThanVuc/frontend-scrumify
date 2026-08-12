@@ -1,0 +1,53 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "card": {
+            "padding": {
+                "sm": {
+                    "$value": "{spacing.4}"
+                },
+                "md": {
+                    "$value": "{spacing.6}"
+                },
+                "lg": {
+                    "$value": "{spacing.8}"
+                }
+            },
+            "radius": {
+                "$value": "{radius.lg}"
+            },
+            "background": {
+                "default": {
+                    "$value": "{color.semantic.surface.default}"
+                },
+                "hover": {
+                    "$value": "{color.semantic.surface.hover}"
+                },
+                "active": {
+                    "$value": "{color.semantic.surface.active}"
+                }
+            },
+            "foreground": {
+                "default": {
+                    "$value": "{color.semantic.text.primary}"
+                },
+                "muted": {
+                    "$value": "{color.semantic.text.secondary}"
+                }
+            },
+            "border": {
+                "width": {
+                    "$value": "{border.width.default}"
+                },
+                "color": {
+                    "$value": "{color.semantic.border.default}"
+                }
+            },
+            "shadow": {
+                "default": {
+                    "$value": "{shadow.sm}"
+                }
+            }
+        }
+    }
+}

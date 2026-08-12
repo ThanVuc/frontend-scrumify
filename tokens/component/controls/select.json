@@ -1,0 +1,134 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "select": {
+            "size": {
+                "sm": {
+                    "height": {
+                        "$value": "{component.control.height.sm}"
+                    },
+                    "paddingX": {
+                        "$value": "{component.control.paddingX.sm}"
+                    },
+                    "gap": {
+                        "$value": "{component.control.gap.sm}"
+                    }
+                },
+                "md": {
+                    "height": {
+                        "$value": "{component.control.height.md}"
+                    },
+                    "paddingX": {
+                        "$value": "{component.control.paddingX.md}"
+                    },
+                    "gap": {
+                        "$value": "{component.control.gap.md}"
+                    }
+                },
+                "lg": {
+                    "height": {
+                        "$value": "{component.control.height.lg}"
+                    },
+                    "paddingX": {
+                        "$value": "{component.control.paddingX.lg}"
+                    },
+                    "gap": {
+                        "$value": "{component.control.gap.lg}"
+                    }
+                }
+            },
+            "typography": {
+                "fontFamily": {
+                    "$value": "{typography.semantic.body.fontFamily}"
+                },
+                "fontSize": {
+                    "$value": "{typography.semantic.body.fontSize}"
+                },
+                "fontWeight": {
+                    "$value": "{typography.semantic.body.fontWeight}"
+                },
+                "lineHeight": {
+                    "$value": "{typography.semantic.body.lineHeight}"
+                },
+                "letterSpacing": {
+                    "$value": "{typography.semantic.body.letterSpacing}"
+                }
+            },
+            "radius": {
+                "$value": "{component.control.radius}"
+            },
+            "background": {
+                "default": {
+                    "$value": "{color.semantic.surface.default}"
+                },
+                "hover": {
+                    "$value": "{color.semantic.surface.hover}"
+                },
+                "open": {
+                    "$value": "{color.semantic.surface.active}"
+                },
+                "disabled": {
+                    "$value": "{color.semantic.surface.active}"
+                }
+            },
+            "foreground": {
+                "default": {
+                    "$value": "{color.semantic.text.primary}"
+                },
+                "placeholder": {
+                    "$value": "{color.semantic.text.muted}"
+                },
+                "disabled": {
+                    "$value": "{color.semantic.text.disabled}"
+                }
+            },
+            "border": {
+                "default": {
+                    "$value": "{color.semantic.border.default}"
+                },
+                "focus": {
+                    "$value": "{color.semantic.border.focus}"
+                },
+                "open": {
+                    "$value": "{color.semantic.border.focus}"
+                },
+                "disabled": {
+                    "$value": "{color.semantic.border.disabled}"
+                },
+                "error": {
+                    "$value": "{color.semantic.border.destructive}"
+                }
+            },
+            "icon": {
+                "size": {
+                    "$value": "{icon.size.md}"
+                },
+                "color": {
+                    "$value": "{icon.color.default}"
+                },
+                "disabled": {
+                    "$value": "{icon.color.disabled}"
+                }
+            },
+            "focus": {
+                "outlineWidth": {
+                    "$value": "{component.control.focus.outlineWidth}"
+                },
+                "outlineOffset": {
+                    "$value": "{component.control.focus.outlineOffset}"
+                },
+                "color": {
+                    "$value": "{component.control.focus.color}"
+                }
+            },
+            "motion": {
+                "duration": {
+                    "$value": "{component.control.motion.duration}"
+                },
+                "easing": {
+                    "$value": "{component.control.motion.easing}"
+                }
+            }
+        }
+    }
+}

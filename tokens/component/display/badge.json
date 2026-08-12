@@ -1,0 +1,116 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "component": {
+        "badge": {
+            "height": {
+                "sm": {
+                    "$value": "20px"
+                },
+                "md": {
+                    "$value": "24px"
+                },
+                "lg": {
+                    "$value": "28px"
+                }
+            },
+            "paddingX": {
+                "sm": {
+                    "$value": "{spacing.2}"
+                },
+                "md": {
+                    "$value": "{spacing.3}"
+                },
+                "lg": {
+                    "$value": "{spacing.3}"
+                }
+            },
+            "gap": {
+                "$value": "{spacing.1}"
+            },
+            "radius": {
+                "$value": "{radius.full}"
+            },
+            "typography": {
+                "sm": {
+                    "fontFamily": { "$value": "{typography.semantic.caption.fontFamily}" },
+                    "fontSize": { "$value": "{typography.semantic.caption.fontSize}" },
+                    "fontWeight": { "$value": "{typography.semantic.caption.fontWeight}" },
+                    "lineHeight": { "$value": "{typography.semantic.caption.lineHeight}" },
+                    "letterSpacing": { "$value": "{typography.semantic.caption.letterSpacing}" }
+                },
+                "md": {
+                    "fontFamily": { "$value": "{typography.semantic.label.fontFamily}" },
+                    "fontSize": { "$value": "{typography.semantic.label.fontSize}" },
+                    "fontWeight": { "$value": "{typography.semantic.label.fontWeight}" },
+                    "lineHeight": { "$value": "{typography.semantic.label.lineHeight}" },
+                    "letterSpacing": { "$value": "{typography.semantic.label.letterSpacing}" }
+                },
+                "lg": {
+                    "fontFamily": { "$value": "{typography.semantic.label.fontFamily}" },
+                    "fontSize": { "$value": "{typography.semantic.label.fontSize}" },
+                    "fontWeight": { "$value": "{typography.semantic.label.fontWeight}" },
+                    "lineHeight": { "$value": "{typography.semantic.label.lineHeight}" },
+                    "letterSpacing": { "$value": "{typography.semantic.label.letterSpacing}" }
+                }
+            },
+            "border": {
+                "width": {
+                    "$value": "{border.width.default}"
+                }
+            },
+            "icon": {
+                "size": {
+                    "sm": {
+                        "$value": "{icon.size.xs}"
+                    },
+                    "md": {
+                        "$value": "{icon.size.sm}"
+                    },
+                    "lg": {
+                        "$value": "{icon.size.md}"
+                    }
+                }
+            },
+            "success": {
+                "background": {
+                    "$value": "{color.semantic.status.success.default}"
+                },
+                "foreground": {
+                    "$value": "{color.semantic.status.success.foreground}"
+                }
+            },
+            "warning": {
+                "background": {
+                    "$value": "{color.semantic.status.warning.default}"
+                },
+                "foreground": {
+                    "$value": "{color.semantic.status.warning.foreground}"
+                }
+            },
+            "error": {
+                "background": {
+                    "$value": "{color.semantic.status.error.default}"
+                },
+                "foreground": {
+                    "$value": "{color.semantic.status.error.foreground}"
+                }
+            },
+            "info": {
+                "background": {
+                    "$value": "{color.semantic.status.info.default}"
+                },
+                "foreground": {
+                    "$value": "{color.semantic.status.info.foreground}"
+                }
+            },
+            "neutral": {
+                "background": {
+                    "$value": "{color.semantic.surface.active}"
+                },
+                "foreground": {
+                    "$value": "{color.semantic.text.primary}"
+                }
+            }
+        }
+    }
+}

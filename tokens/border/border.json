@@ -1,0 +1,36 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "border": {
+        "width": {
+            "none": {
+                "$value": "0px"
+            },
+            "thin": {
+                "$value": "1px"
+            },
+            "medium": {
+                "$value": "2px"
+            },
+            "thick": {
+                "$value": "4px"
+            },
+            "default": {
+                "$value": "{border.width.thin}"
+            },
+            "focus": {
+                "$value": "{border.width.medium}"
+            }
+        },
+        "style": {
+            "solid": {
+                "$value": "solid"
+            },
+            "dashed": {
+                "$value": "dashed"
+            },
+            "dotted": {
+                "$value": "dotted"
+            }
+        }
+    }
+}

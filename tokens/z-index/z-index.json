@@ -1,0 +1,23 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "zIndex": {
+        "base": {
+            "$value": 0
+        },
+        "dropdown": {
+            "$value": 1000
+        },
+        "sticky": {
+            "$value": 1100
+        },
+        "modal": {
+            "$value": 1200
+        },
+        "toast": {
+            "$value": 1300
+        },
+        "tooltip": {
+            "$value": 1400
+        }
+    }
+}

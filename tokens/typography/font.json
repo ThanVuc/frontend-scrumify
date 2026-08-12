@@ -1,0 +1,29 @@
+{
+    "$schema": "https://design-tokens.github.io/community-group/format/",
+    "typography": {
+        "font": {
+            "family": {
+                "sans": {
+                    "$value": "Geist"
+                },
+                "mono": {
+                    "$value": "JetBrains Mono"
+                }
+            },
+            "weight": {
+                "regular": {
+                    "$value": 400
+                },
+                "medium": {
+                    "$value": 500
+                },
+                "semibold": {
+                    "$value": 600
+                },
+                "bold": {
+                    "$value": 700
+                }
+            }
+        }
+    }
+}
