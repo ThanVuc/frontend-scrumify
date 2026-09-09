@@ -1,2 +1,2 @@
 // Barrel for auth pages
-export {}
+export { AuthPage } from "./authPage";
