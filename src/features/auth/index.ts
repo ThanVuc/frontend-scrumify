@@ -1,2 +1,2 @@
 // Barrel for auth feature
-export {}
+export {} from "./router";

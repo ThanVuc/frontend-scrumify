@@ -1,2 +1,2 @@
 // Barrel for routes
-export {}
+export { router } from "./router";
