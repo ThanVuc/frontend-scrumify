@@ -5,8 +5,8 @@ import {
 	TabsList,
 	TabsTrigger,
 } from "@/components/ui/tabs";
-import { Login } from "./login";
-import { Register } from "./register";
+import { LoginForm } from "../../forms/login/LoginForm";
+import { RegisterForm } from "../../forms/register/RegisterForm";
 import "./index.scss";
 
 export const AuthCard = () => {
@@ -28,7 +28,7 @@ export const AuthCard = () => {
 					</p>
 				</header>
 
-				<Card className="mt-6 rounded-lg border border-border bg-surface shadow-none sm:mt-8">
+				<Card className="mt-6 rounded-lg border border-border bg-surface/95 shadow-none sm:mt-8">
 					<CardContent className="p-4 sm:p-5">
 						<Tabs defaultValue="login">
 							<TabsList className="auth-tab-list">
@@ -40,10 +40,10 @@ export const AuthCard = () => {
 								</TabsTrigger>
 							</TabsList>
 							<TabsContent value="login" className="mt-5">
-								<Login />
+								<LoginForm />
 							</TabsContent>
 							<TabsContent value="register" className="mt-5">
-								<Register />
+								<RegisterForm />
 							</TabsContent>
 						</Tabs>
 					</CardContent>

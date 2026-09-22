@@ -3,10 +3,10 @@ import { AuthPage } from "./pages";
 
 export const authRoutes: RouteObject[] = [
   {
-    path: "",
+    path: "auth",
     children: [
       {
-        path: "auth",
+        path: "",
         element: <AuthPage />,
       }
     ],
