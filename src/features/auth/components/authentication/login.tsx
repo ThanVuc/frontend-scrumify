@@ -18,7 +18,7 @@ export const Login = () => {
 				<Input
 					id="email"
 					type="email"
-					placeholder="name@company.com"
+					placeholder="yourname@gmail.com"
 					className="h-9 text-sm"
 				/>
 			</div>
