@@ -1,25 +1,28 @@
 // register.form.ts
 import { useForm } from "@tanstack/react-form";
+import { registerSchema } from "../../types/schema/register.schema";
+import type { RegisterRequest } from "../../types/types/register.types";
+import { useRegister } from "../../hooks";
 
-import { registerSchema } from "./register.schema";
-import type { RegisterFormValues } from "./register.types";
+export const useRegisterForm = () => {
+	const registerMutation = useRegister();
 
-export const useRegisterForm = () =>
-	useForm({
+	return useForm({
 		defaultValues: {
-			fullName: "",
+			name: "",
 			email: "",
 			password: "",
 			confirmPassword: "",
-		} satisfies RegisterFormValues,
+		} satisfies RegisterRequest,
 
 		validators: {
 			onSubmit: registerSchema,
 		},
 
 		onSubmit: async ({ value }) => {
-			console.log(value);
+			await registerMutation.mutateAsync(value);
 		},
-	});
+	})
+};
 
 export type RegisterForm = ReturnType<typeof useRegisterForm>;

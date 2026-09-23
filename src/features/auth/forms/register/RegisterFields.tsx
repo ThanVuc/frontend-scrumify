@@ -14,7 +14,7 @@ export const RegisterFields = ({ form }: RegisterFieldsProps) => {
 	return (
 		<>
 			<form.Field
-				name="fullName"
+				name="name"
 				children={(field) => {
 					const isInvalid = field.state.meta.isTouched && !field.state.meta.isValid;
 

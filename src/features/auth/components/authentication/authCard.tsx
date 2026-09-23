@@ -8,6 +8,7 @@ import {
 import { LoginForm } from "../../forms/login/LoginForm";
 import { RegisterForm } from "../../forms/register/RegisterForm";
 import "./index.scss";
+import ForgotLink from "./forgotLink";
 
 export const AuthCard = () => {
 	return (
@@ -41,9 +42,11 @@ export const AuthCard = () => {
 							</TabsList>
 							<TabsContent value="login" className="mt-5">
 								<LoginForm />
+								<ForgotLink />
 							</TabsContent>
 							<TabsContent value="register" className="mt-5">
 								<RegisterForm />
+								<ForgotLink />
 							</TabsContent>
 						</Tabs>
 					</CardContent>

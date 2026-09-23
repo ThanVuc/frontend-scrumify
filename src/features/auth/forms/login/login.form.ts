@@ -1,23 +1,27 @@
 // login.form.ts
 import { useForm } from "@tanstack/react-form";
+import { loginSchema } from "../../types/schema/login.schema";
+import type { LoginRequest } from "../../types/types/login.types";
+import { useLogin } from "../../hooks";
 
-import { loginSchema } from "./login.schema";
-import type { LoginFormValues } from "./login.types";
 
-export const useLoginForm = () =>
-	useForm({
+export const useLoginForm = () => {
+	const loginMutation = useLogin();
+
+	return useForm({
 		defaultValues: {
 			email: "",
 			password: "",
-		} satisfies LoginFormValues,
+		} satisfies LoginRequest,
 
 		validators: {
 			onSubmit: loginSchema,
 		},
 
 		onSubmit: async ({ value }) => {
-			console.log(value);
+			await loginMutation.mutateAsync(value);
 		},
 	});
+};
 
 export type LoginForm = ReturnType<typeof useLoginForm>;
