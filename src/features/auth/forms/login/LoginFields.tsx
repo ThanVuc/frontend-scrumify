@@ -62,13 +62,6 @@ export const LoginFields = ({ form }: LoginFieldsProps) => {
                                 >
                                     Password
                                 </FieldLabel>
-
-                                <a
-                                    href="#"
-                                    className="font-mono text-[8px] uppercase tracking-wide text-muted-foreground hover:text-foreground"
-                                >
-                                    Forgot?
-                                </a>
                             </div>
 
                             <PasswordInput
