@@ -17,6 +17,9 @@
   --surface: #ffffff;
   --surface-foreground: #000000;
 
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+
   --border: #e5e5e5;
   --input: #e5e5e5;
   --ring: #a3a3a3;
@@ -29,12 +32,29 @@
 
   --warning: #f59e0b;
   --warning-foreground: #000000;
+
+  --success: #10b981;
+  --success-foreground: #ffffff;
+
+  --info: #6366f1;
+  --info-foreground: #ffffff;
+
+  /* Sidebar */
+  --sidebar: var(--surface);
+  --sidebar-foreground: var(--surface-foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--muted);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 /* Dark mode */
 .dark {
-  --background: #000000;
-  --foreground: #fafafa;
+  color-scheme: dark;
+  --background: #121316;
+  --foreground: #f4f4f5;
 
   --primary: #fafafa;
   --primary-foreground: #000000;
@@ -42,14 +62,17 @@
   --secondary: #262626;
   --secondary-foreground: #fafafa;
 
-  --surface: #1a1a1a;
-  --surface-foreground: #fafafa;
+  --surface: #18191e;
+  --surface-foreground: #f4f4f5;
+
+  --popover: #1b1c22;
+  --popover-foreground: #f4f4f5;
 
   --muted: #262626;
-  --muted-foreground: #a3a3a3;
+  --muted-foreground: #8a8b98;
 
-  --border: #404040;
-  --input: #404040;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
   --ring: #737373;
 
   /* Variant */
@@ -58,6 +81,22 @@
 
   --warning: #fbbf24;
   --warning-foreground: #000000;
+
+  --success: #34d399;
+  --success-foreground: #000000;
+
+  --info: #818cf8;
+  --info-foreground: #000000;
+
+  /* Sidebar */
+  --sidebar: #121316;
+  --sidebar-foreground: #f4f4f5;
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: rgba(255, 255, 255, 0.07);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: var(--ring);
 }
 
 @theme inline {
@@ -76,6 +115,9 @@
   --color-surface: var(--surface);
   --color-surface-foreground: var(--surface-foreground);
 
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -90,6 +132,22 @@
 
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 * {
@@ -104,6 +162,7 @@ body,
 
 body {
   margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
@@ -114,6 +173,15 @@ input,
 textarea,
 [contenteditable="true"] {
   user-select: text;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--foreground);
+  caret-color: var(--foreground);
+  transition: background-color 9999s ease-in-out 0s;
 }
 
 html {

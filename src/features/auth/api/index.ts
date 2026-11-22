@@ -1,2 +1,2 @@
 // Barrel for auth services
-export {}
+export { logout } from "./logout.api";
