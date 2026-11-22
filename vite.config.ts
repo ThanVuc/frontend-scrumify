@@ -16,4 +16,12 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://scrumify-sandbox:5000",
+        changeOrigin: true,
+      },
+    },
+  },
 })

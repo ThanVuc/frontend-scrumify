@@ -7,7 +7,7 @@ import { queryClient } from "./lib/query-client.ts";
 
 const root = document.getElementById("root")!;
 
-root.classList.add("dark");
+document.documentElement.classList.add("dark");
 
 createRoot(root).render(
   <StrictMode>

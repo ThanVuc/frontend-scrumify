@@ -13,7 +13,7 @@ export const apiClient = async (
 ) => {
     const { query, body, headers, ...requestInit } = options;
 
-    const url = new URL(`${API_BASE_URL}${path}`);
+    const url = new URL(`${API_BASE_URL}${path}`, window.location.origin);
 
     if (query) {
         Object.entries(query).forEach(([key, value]) => {
@@ -36,7 +36,24 @@ export const apiClient = async (
     });
 
     if (!response.ok) {
-        const errorBody: ApiErrorResponse = await response.json();
+        let parsedBody: Partial<ApiErrorResponse> = {};
+        try {
+            const json: unknown = await response.json();
+            if (json && typeof json === "object") {
+                parsedBody = json as Partial<ApiErrorResponse>;
+            }
+        } catch {
+            // Non-JSON or empty error body; fall back to HTTP status
+        }
+
+        const errorBody: ApiErrorResponse = {
+            code: typeof parsedBody.code === "string" && parsedBody.code.length > 0
+                ? parsedBody.code
+                : `HTTP_${response.status}`,
+            detail: parsedBody.detail ?? (response.statusText || "Request failed"),
+            path: parsedBody.path ?? path,
+            traceId: parsedBody.traceId ?? "",
+        };
 
         throw new ApiError(errorBody, response.status);
     }

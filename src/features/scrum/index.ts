@@ -1,2 +1,2 @@
-// Barrel for auth feature
-export {} from "./router";
+// Barrel for scrum feature
+export { scrumRoutes } from "./router";

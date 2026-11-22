@@ -1,2 +1,3 @@
 // Barrel for auth feature
-export {} from "./router";
+export { authRoutes } from "./router";
+export { useLogout } from "./hooks";
