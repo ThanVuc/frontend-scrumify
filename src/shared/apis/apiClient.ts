@@ -1,6 +1,6 @@
 import { ApiError, type ApiErrorResponse } from "../types/error";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api/v1";
 
 type ApiRequestOptions = Omit<RequestInit, "body"> & {
     query?: Record<string, string | number | boolean | undefined>;
