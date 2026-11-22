@@ -6,3 +6,5 @@ dist
 .idea
 Dockerfile
 README.md
+.env.local
+.env.*.local

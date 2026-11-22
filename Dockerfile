@@ -1,7 +1,7 @@
 # ==========================
 # Stage 1: Build React App
 # ==========================
-FROM node:22-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,8 @@ RUN npm ci
 COPY . .
 
 # Build production
-RUN npm run build
+ARG BUILD_MODE=dev
+RUN npx tsc -b && npx vite build --mode ${BUILD_MODE}
 
 # ==========================
 # Stage 2: Nginx
