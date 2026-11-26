@@ -1,5 +1,10 @@
 import type { RouteObject } from "react-router-dom";
-import { ProjectsPage, ScrumLayout } from "./pages";
+import {
+  ProjectLayout,
+  ProjectOverviewPage,
+  ProjectsPage,
+  ScrumLayout,
+} from "./pages";
 
 export const scrumRoutes: RouteObject[] = [
   {
@@ -8,7 +13,7 @@ export const scrumRoutes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: null,
+        element: <ProjectOverviewPage />,
       },
       {
         path: "projects",
@@ -16,6 +21,36 @@ export const scrumRoutes: RouteObject[] = [
       },
       {
         path: "supports",
+        element: null,
+      },
+    ],
+  },
+  {
+    path: "/projects/:id",
+    element: <ProjectLayout />,
+    children: [
+      {
+        index: true,
+        element: <ProjectOverviewPage />,
+      },
+      {
+        path: "pbis",
+        element: null,
+      },
+      {
+        path: "tasks",
+        element: null,
+      },
+      {
+        path: "epics",
+        element: null,
+      },
+      {
+        path: "sprints/active",
+        element: null,
+      },
+      {
+        path: "sprints",
         element: null,
       },
     ],

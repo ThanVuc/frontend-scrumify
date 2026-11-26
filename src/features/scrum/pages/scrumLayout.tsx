@@ -1,5 +1,7 @@
 import type { CSSProperties } from "react";
+import { useTranslation } from "react-i18next";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { LanguageSwitcher } from "@/components/common";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -16,12 +18,16 @@ import {
 import { SCRUM_NAV_ITEMS, ScrumSidebar } from "../components/ScrumSidebar";
 
 export const ScrumLayout = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
-  const activeTitle =
-    SCRUM_NAV_ITEMS.find((item) => item.path === location.pathname)?.title ??
-    "Daily news";
+  const activeItem = SCRUM_NAV_ITEMS.find(
+    (item) => item.path === location.pathname,
+  );
+  const activeTitle = activeItem
+    ? t(activeItem.titleKey)
+    : t("nav.dailyNews");
 
   return (
     <SidebarProvider
@@ -39,7 +45,7 @@ export const ScrumLayout = () => {
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <span>Scrumify</span>
+                <span>{t("common.appName")}</span>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -47,6 +53,9 @@ export const ScrumLayout = () => {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
+          <div className="ml-auto">
+            <LanguageSwitcher />
+          </div>
         </header>
         <main className="flex-1 p-6">
           <Outlet />

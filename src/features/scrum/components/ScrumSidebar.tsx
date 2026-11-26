@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   CircleUserIcon,
   LogOutIcon,
@@ -31,17 +32,17 @@ import newsIcon from "@/components/icons/news.svg?raw";
 
 export const SCRUM_NAV_ITEMS = [
   {
-    title: "Daily news",
+    titleKey: "nav.dailyNews" as const,
     path: "/",
     icon: newsIcon,
   },
   {
-    title: "Projects",
+    titleKey: "nav.projects" as const,
     path: "/projects",
     icon: folderIcon,
   },
   {
-    title: "Supports",
+    titleKey: "nav.supports" as const,
     path: "/supports",
     icon: questionIcon,
   },
@@ -56,6 +57,7 @@ export const ScrumSidebar = ({
   activePath,
   onSelectItem,
 }: ScrumSidebarProps) => {
+  const { t } = useTranslation();
   const logoutMutation = useLogout();
 
   return (
@@ -75,23 +77,27 @@ export const ScrumSidebar = ({
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {SCRUM_NAV_ITEMS.map((item) => (
-                <SidebarMenuItem key={item.path}>
-                  <SidebarMenuButton
-                    tooltip={item.title}
-                    isActive={item.path === activePath}
-                    onClick={() => onSelectItem(item.path)}
-                    className="rounded-lg text-[13px] font-medium text-[#8a8b98] transition-colors hover:bg-white/[0.04] hover:text-white data-active:bg-white/[0.07] data-active:text-white"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="inline-flex size-4 shrink-0 items-center justify-center [&>svg]:size-4"
-                      dangerouslySetInnerHTML={{ __html: item.icon }}
-                    />
-                    <span>{item.title}</span>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {SCRUM_NAV_ITEMS.map((item) => {
+                const label = t(item.titleKey);
+
+                return (
+                  <SidebarMenuItem key={item.path}>
+                    <SidebarMenuButton
+                      tooltip={label}
+                      isActive={item.path === activePath}
+                      onClick={() => onSelectItem(item.path)}
+                      className="rounded-lg text-[13px] font-medium text-[#8a8b98] transition-colors hover:bg-white/[0.04] hover:text-white data-active:bg-white/[0.07] data-active:text-white"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="inline-flex size-4 shrink-0 items-center justify-center [&>svg]:size-4"
+                        dangerouslySetInnerHTML={{ __html: item.icon }}
+                      />
+                      <span>{label}</span>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -142,11 +148,11 @@ export const ScrumSidebar = ({
 
                 <DropdownMenuItem className="gap-2.5 rounded-lg px-2.5 py-1.5 text-[13px] text-[#d4d4d8] focus:bg-white/[0.06] focus:text-white">
                   <CircleUserIcon className="size-4 text-[#6366f1]" />
-                  <span>Profile</span>
+                  <span>{t("nav.profile")}</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="gap-2.5 rounded-lg px-2.5 py-1.5 text-[13px] text-[#d4d4d8] focus:bg-white/[0.06] focus:text-white">
                   <SlidersHorizontalIcon className="size-4 text-[#8a8b98]" />
-                  <span>Settings</span>
+                  <span>{t("nav.settings")}</span>
                 </DropdownMenuItem>
 
                 <DropdownMenuSeparator />
@@ -158,7 +164,7 @@ export const ScrumSidebar = ({
                   className="gap-2.5 rounded-lg px-2.5 py-1.5 text-[13px] text-red-400 focus:bg-red-500/10 focus:text-red-400"
                 >
                   <LogOutIcon className="size-4" />
-                  <span>Log out</span>
+                  <span>{t("nav.logOut")}</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

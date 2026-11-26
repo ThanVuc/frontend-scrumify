@@ -1,0 +1,108 @@
+{
+  "common": {
+    "appName": "Scrumify",
+    "retry": "Retry",
+    "backToProjects": "Back to Projects",
+    "new": "New",
+    "cancel": "Cancel",
+    "close": "Close",
+    "language": "Language"
+  },
+  "nav": {
+    "dailyNews": "Daily news",
+    "projects": "Projects",
+    "supports": "Supports",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logOut": "Log out"
+  },
+  "projectNav": {
+    "workspace": "Workspace",
+    "overview": "Overview",
+    "productBacklog": "Product Backlog",
+    "allPbis": "All PBIs",
+    "allTasks": "All Tasks",
+    "epics": "Epics",
+    "sprints": "Sprints",
+    "activeSprint": "Active Sprint",
+    "allSprints": "All Sprints",
+    "backToProjects": "Back to Projects",
+    "notifications": "Notifications",
+    "projectFallback": "Project"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Manage workspaces, active sprints, backlog roadmaps, and engineering initiatives.",
+    "newProject": "New project",
+    "emptyTitle": "No projects yet",
+    "emptyDescription": "Create your first Scrum workspace to start managing backlogs and sprints.",
+    "loadErrorTitle": "Unable to load projects",
+    "errorCodeLabel": "Error code:",
+    "stats": {
+      "project_one": "Project",
+      "project_other": "Projects",
+      "activePbi_one": "Active PBI",
+      "activePbi_other": "Active PBIs",
+      "contributor_one": "Contributor",
+      "contributor_other": "Contributors"
+    },
+    "card": {
+      "noActiveSprint": "No active sprint",
+      "endsDate": "{{name}} • Ends {{date}}",
+      "pbisCount": "{{active}}/{{total}} PBIs",
+      "moreOptions": "More options for {{name}}"
+    },
+    "create": {
+      "title": "New project",
+      "nameLabel": "Project name",
+      "namePlaceholder": "Project name",
+      "descriptionLabel": "Project description",
+      "descriptionPlaceholder": "Add a brief description of the workspace, goals, or scope...",
+      "keyLabel": "Key:",
+      "keyPrefix": "Project key prefix",
+      "keyHint": "(Prefix for PBIs: {{prefix}}-101)",
+      "createMore": "Create more",
+      "submit": "Create project",
+      "submitting": "Creating...",
+      "errorTitle": "Failed to create project",
+      "successTitle": "Project created",
+      "successDescription": "\"{{name}}\" ({{codePrefix}}) is ready."
+    }
+  },
+  "projectOverview": {
+    "activeBadge": "{{name}} • Active",
+    "invite": "Invite",
+    "editProject": "Edit Project",
+    "projectSettings": "Project settings",
+    "loadErrorTitle": "Unable to load project",
+    "stats": {
+      "activeSprintLabel": "ACTIVE SPRINT",
+      "noActiveSprint": "No active sprint",
+      "activeIteration": "Active iteration",
+      "planSprintHint": "Plan a sprint to get started",
+      "dayOfTotal": "Day {{current}} of {{total}}",
+      "endsDate": "Ends {{date}}",
+      "startsDate": "Starts {{date}}",
+      "totalPbisLabel": "TOTAL PBIS",
+      "pbisBreakdown": "{{backlog}} Backlog • {{debt}} Debt",
+      "projectOwnerLabel": "PROJECT OWNER",
+      "ownerSubtitle_one": "Project Owner • {{count}} member",
+      "ownerSubtitle_other": "Project Owner • {{count}} members"
+    },
+    "workspaces": {
+      "heading": "PROJECT WORKSPACES",
+      "areasCount": "{{count}} Areas",
+      "backlogTitle": "Product Backlog",
+      "backlogSubtitle_one": "{{count}} backlog item awaiting refinement",
+      "backlogSubtitle_other": "{{count}} backlog items awaiting refinement",
+      "tasksTitle": "All Tasks",
+      "tasksSubtitle": "All project tasks, defects & technical debt",
+      "debtBadge": "{{count}} Debt",
+      "sprintsTitle": "Sprints",
+      "sprintsActiveSubtitle": "Active {{name}} board & planning",
+      "sprintsDefaultSubtitle": "Sprint board & iteration planning",
+      "epicsTitle": "Epics",
+      "epicsSubtitle": "Initiatives and high-level PBI groupings"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "common": {
+    "appName": "Scrumify",
+    "retry": "Thử lại",
+    "backToProjects": "Quay lại Dự án",
+    "new": "Tạo mới",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "language": "Ngôn ngữ"
+  },
+  "nav": {
+    "dailyNews": "Tin tức hằng ngày",
+    "projects": "Dự án",
+    "supports": "Hỗ trợ",
+    "profile": "Hồ sơ",
+    "settings": "Cài đặt",
+    "logOut": "Đăng xuất"
+  },
+  "projectNav": {
+    "workspace": "Không gian làm việc",
+    "overview": "Tổng quan",
+    "productBacklog": "Product Backlog",
+    "allPbis": "Tất cả PBI",
+    "allTasks": "Tất cả công việc",
+    "epics": "Epics",
+    "sprints": "Sprints",
+    "activeSprint": "Sprint hiện tại",
+    "allSprints": "Tất cả Sprints",
+    "backToProjects": "Quay lại Dự án",
+    "notifications": "Thông báo",
+    "projectFallback": "Dự án"
+  },
+  "projects": {
+    "title": "Dự án",
+    "subtitle": "Quản lý không gian làm việc, sprint đang chạy, backlog và các sáng kiến kỹ thuật.",
+    "newProject": "Dự án mới",
+    "emptyTitle": "Chưa có dự án nào",
+    "emptyDescription": "Tạo không gian Scrum đầu tiên để bắt đầu quản lý backlog và sprint.",
+    "loadErrorTitle": "Không thể tải danh sách dự án",
+    "errorCodeLabel": "Mã lỗi:",
+    "stats": {
+      "project_one": "Dự án",
+      "project_other": "Dự án",
+      "activePbi_one": "PBI đang hoạt động",
+      "activePbi_other": "PBI đang hoạt động",
+      "contributor_one": "Thành viên",
+      "contributor_other": "Thành viên"
+    },
+    "card": {
+      "noActiveSprint": "Chưa có sprint đang chạy",
+      "endsDate": "{{name}} • Kết thúc {{date}}",
+      "pbisCount": "{{active}}/{{total}} PBI",
+      "moreOptions": "Tùy chọn khác cho {{name}}"
+    },
+    "create": {
+      "title": "Dự án mới",
+      "nameLabel": "Tên dự án",
+      "namePlaceholder": "Tên dự án",
+      "descriptionLabel": "Mô tả dự án",
+      "descriptionPlaceholder": "Thêm mô tả ngắn gọn về không gian làm việc, mục tiêu hoặc phạm vi...",
+      "keyLabel": "Mã:",
+      "keyPrefix": "Tiền tố mã dự án",
+      "keyHint": "(Tiền tố cho PBI: {{prefix}}-101)",
+      "createMore": "Tạo thêm",
+      "submit": "Tạo dự án",
+      "submitting": "Đang tạo...",
+      "errorTitle": "Tạo dự án thất bại",
+      "successTitle": "Đã tạo dự án",
+      "successDescription": "\"{{name}}\" ({{codePrefix}}) đã sẵn sàng."
+    }
+  },
+  "projectOverview": {
+    "activeBadge": "{{name}} • Đang chạy",
+    "invite": "Mời thành viên",
+    "editProject": "Chỉnh sửa",
+    "projectSettings": "Cài đặt dự án",
+    "loadErrorTitle": "Không thể tải thông tin dự án",
+    "stats": {
+      "activeSprintLabel": "SPRINT ĐANG CHẠY",
+      "noActiveSprint": "Chưa có sprint đang chạy",
+      "activeIteration": "Vòng lặp đang hoạt động",
+      "planSprintHint": "Lên kế hoạch sprint để bắt đầu",
+      "dayOfTotal": "Ngày {{current}} / {{total}}",
+      "endsDate": "Kết thúc {{date}}",
+      "startsDate": "Bắt đầu {{date}}",
+      "totalPbisLabel": "TỔNG SỐ PBI",
+      "pbisBreakdown": "{{backlog}} Backlog • {{debt}} Nợ kỹ thuật",
+      "projectOwnerLabel": "CHỦ DỰ ÁN",
+      "ownerSubtitle_one": "Chủ dự án • {{count}} thành viên",
+      "ownerSubtitle_other": "Chủ dự án • {{count}} thành viên"
+    },
+    "workspaces": {
+      "heading": "KHÔNG GIAN DỰ ÁN",
+      "areasCount": "{{count}} khu vực",
+      "backlogTitle": "Product Backlog",
+      "backlogSubtitle_one": "{{count}} mục backlog đang chờ tinh chỉnh",
+      "backlogSubtitle_other": "{{count}} mục backlog đang chờ tinh chỉnh",
+      "tasksTitle": "Tất cả công việc",
+      "tasksSubtitle": "Toàn bộ công việc, lỗi và nợ kỹ thuật của dự án",
+      "debtBadge": "{{count}} Nợ kỹ thuật",
+      "sprintsTitle": "Sprints",
+      "sprintsActiveSubtitle": "Bảng và kế hoạch cho {{name}}",
+      "sprintsDefaultSubtitle": "Bảng sprint và lập kế hoạch vòng lặp",
+      "epicsTitle": "Epics",
+      "epicsSubtitle": "Các sáng kiến và nhóm PBI cấp cao"
+    }
+  }
+}

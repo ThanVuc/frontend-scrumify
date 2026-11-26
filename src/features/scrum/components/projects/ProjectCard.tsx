@@ -1,13 +1,11 @@
-import type { ComponentType } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import {
   CalendarIcon,
   CircleCheckIcon,
   LayersIcon,
   MoreHorizontalIcon,
-  NetworkIcon,
   RefreshCwIcon,
-  SmartphoneIcon,
-  TerminalIcon,
 } from "lucide-react";
 import {
   Avatar,
@@ -15,130 +13,168 @@ import {
   AvatarGroup,
   AvatarGroupCount,
 } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import type {
-  ProjectIconType,
-  ProjectItem,
-  ProjectStatus,
-} from "../../types/project.types";
+import type { ProjectListItem } from "../../types";
 
-const PROJECT_ICON_MAP: Record<
-  ProjectIconType,
-  { Icon: ComponentType<{ className?: string }>; colorClass: string }
-> = {
-  platform: { Icon: LayersIcon, colorClass: "text-indigo-400" },
-  design: { Icon: NetworkIcon, colorClass: "text-sky-400" },
-  api: { Icon: TerminalIcon, colorClass: "text-amber-400" },
-  mobile: { Icon: SmartphoneIcon, colorClass: "text-violet-400" },
+const AVATAR_COLOR_CLASSES = [
+  "bg-indigo-500 text-white",
+  "bg-sky-500 text-white",
+  "bg-emerald-500 text-white",
+  "bg-amber-500 text-white",
+  "bg-rose-500 text-white",
+  "bg-violet-500 text-white",
+] as const;
+
+const MAX_VISIBLE_MEMBERS = 3;
+
+const getInitials = (name: string): string => {
+  const words = name.trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0) {
+    return "?";
+  }
+
+  if (words.length === 1) {
+    return Array.from(words[0]).slice(0, 2).join("").toUpperCase();
+  }
+
+  const first = Array.from(words[0])[0] ?? "";
+  const last = Array.from(words[words.length - 1])[0] ?? "";
+  return `${first}${last}`.toUpperCase() || "?";
 };
 
-const STATUS_BADGE_MAP: Record<
-  ProjectStatus,
-  { badgeClass: string; dotClass: string }
-> = {
-  in_progress: {
-    badgeClass: "border-success/30 bg-success/10 text-success",
-    dotClass: "bg-success",
-  },
-  on_track: {
-    badgeClass: "border-sky-500/30 bg-sky-500/10 text-sky-400",
-    dotClass: "bg-sky-400",
-  },
-  planning: {
-    badgeClass: "border-warning/30 bg-warning/10 text-warning",
-    dotClass: "bg-warning",
-  },
-  active_beta: {
-    badgeClass: "border-indigo-500/30 bg-indigo-500/10 text-indigo-400",
-    dotClass: "bg-indigo-400",
-  },
+const getAvatarColorClass = (userId: string): string => {
+  let hash = 0;
+  for (let index = 0; index < userId.length; index += 1) {
+    hash = (hash + userId.charCodeAt(index)) % AVATAR_COLOR_CLASSES.length;
+  }
+  return AVATAR_COLOR_CLASSES[hash];
+};
+
+const formatShortDate = (value: string): string => {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "2-digit",
+    timeZone: "UTC",
+  }).format(parsed);
 };
 
 type ProjectCardProps = {
-  project: ProjectItem;
+  project: ProjectListItem;
 };
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-  const { Icon: ProjectIcon, colorClass } = PROJECT_ICON_MAP[project.icon];
-  const statusStyle = STATUS_BADGE_MAP[project.status];
-  const ScheduleIcon =
-    project.scheduleType === "sprint" ? RefreshCwIcon : CalendarIcon;
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const visibleMembers = project.members.slice(0, MAX_VISIBLE_MEMBERS);
+  const extraMembersCount = project.members.length - visibleMembers.length;
+
+  const scheduleLabel = project.activeSprint
+    ? project.activeSprint.end
+      ? t("projects.card.endsDate", {
+          name: project.activeSprint.name,
+          date: formatShortDate(project.activeSprint.end),
+        })
+      : project.activeSprint.name
+    : t("projects.card.noActiveSprint");
+
+  const openProject = () => {
+    navigate(`/projects/${project.id}`);
+  };
 
   return (
-    <Card className="rounded-xl border border-white/[0.08] bg-[#18191e] py-0 shadow-none ring-0 transition-all hover:border-white/[0.14] hover:bg-[#1d1e25]">
+    <Card
+      role="link"
+      tabIndex={0}
+      onClick={openProject}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openProject();
+        }
+      }}
+      className="cursor-pointer rounded-xl border border-white/[0.08] bg-[#18191e] py-0 shadow-none ring-0 transition-all hover:border-white/[0.14] hover:bg-[#1d1e25] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    >
       <CardContent className="flex items-center justify-between gap-4 px-5 py-4">
-        <div className="flex min-w-0 items-start gap-3.5">
+        <div
+          className={cn(
+            "flex min-w-0 gap-3.5",
+            project.description ? "items-start" : "items-center",
+          )}
+        >
           <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.04]">
-            <ProjectIcon className={cn("size-4", colorClass)} />
+            <LayersIcon className="size-4 text-indigo-400" />
           </div>
 
           <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <h2 className="text-[15px] font-semibold text-white">
-                {project.name}
-              </h2>
-              <Badge
-                variant="outline"
-                className={cn("gap-1.5 rounded-full px-2 py-0.5 text-[11px] font-medium", statusStyle.badgeClass)}
-              >
-                <span
-                  aria-hidden="true"
-                  className={cn("size-1.5 rounded-full", statusStyle.dotClass)}
-                />
-                {project.statusLabel}
-              </Badge>
-            </div>
+            <h2 className="truncate text-[15px] font-semibold text-white">
+              {project.name}
+            </h2>
 
-            <p className="mt-0.5 truncate text-[13px] text-[#8a8b98]">
-              {project.description}
-            </p>
+            {project.description && (
+              <p className="mt-0.5 truncate text-[13px] text-[#8a8b98]">
+                {project.description}
+              </p>
+            )}
 
-            <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-[#8a8b98]">
+            <div className="mt-1.5 flex flex-wrap items-center gap-3 text-xs text-[#8a8b98]">
               <span className="inline-flex items-center gap-1.5">
-                <ScheduleIcon
-                  className={cn(
-                    "size-3.5",
-                    project.scheduleType === "sprint"
-                      ? "text-sky-400"
-                      : "text-amber-400"
-                  )}
-                />
-                {project.scheduleLabel}
+                {project.activeSprint ? (
+                  <RefreshCwIcon className="size-3.5 text-sky-400" />
+                ) : (
+                  <CalendarIcon className="size-3.5 text-[#8a8b98]" />
+                )}
+                {scheduleLabel}
               </span>
               <span aria-hidden="true">•</span>
               <span className="inline-flex items-center gap-1.5">
                 <CircleCheckIcon className="size-3.5 text-[#8a8b98]" />
-                {project.pbiSummary}
+                {t("projects.card.pbisCount", {
+                  active: project.activePBIsCount,
+                  total: project.totalPBIsCount,
+                })}
               </span>
             </div>
           </div>
         </div>
 
         <div className="flex shrink-0 items-center gap-3">
-          <AvatarGroup className="*:data-[slot=avatar]:size-6 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-[#18191e]">
-            {project.members.map((member) => (
-              <Avatar key={member.initials} size="sm">
-                <AvatarFallback
-                  className={cn("text-[10px] font-semibold", member.colorClass)}
-                >
-                  {member.initials}
-                </AvatarFallback>
-              </Avatar>
-            ))}
-            {project.extraMembersCount !== undefined && (
-              <AvatarGroupCount className="size-6 bg-[#232429] text-[10px] font-semibold text-[#d4d4d8] ring-2 ring-[#18191e]">
-                +{project.extraMembersCount}
-              </AvatarGroupCount>
-            )}
-          </AvatarGroup>
+          {visibleMembers.length > 0 && (
+            <AvatarGroup className="*:data-[slot=avatar]:size-6 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-[#18191e]">
+              {visibleMembers.map((member) => (
+                <Avatar key={member.id} size="sm" title={member.name}>
+                  <AvatarFallback
+                    className={cn(
+                      "text-[10px] font-semibold",
+                      getAvatarColorClass(member.userId),
+                    )}
+                  >
+                    {getInitials(member.name)}
+                  </AvatarFallback>
+                </Avatar>
+              ))}
+              {extraMembersCount > 0 && (
+                <AvatarGroupCount className="size-6 bg-[#232429] text-[10px] font-semibold text-[#d4d4d8] ring-2 ring-[#18191e]">
+                  +{extraMembersCount}
+                </AvatarGroupCount>
+              )}
+            </AvatarGroup>
+          )}
 
           <Button
+            type="button"
             variant="ghost"
             size="icon-sm"
-            aria-label={`More options for ${project.name}`}
+            aria-label={t("projects.card.moreOptions", { name: project.name })}
+            onClick={(event) => {
+              event.stopPropagation();
+            }}
             className="rounded-md p-1.5 text-[#8a8b98] transition-colors hover:bg-white/[0.06] hover:text-white"
           >
             <MoreHorizontalIcon className="size-4" />
