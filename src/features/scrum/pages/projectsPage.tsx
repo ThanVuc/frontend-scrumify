@@ -104,23 +104,23 @@ export const ProjectsPage = () => {
       {!isLoading && !isError && (
         <>
           {items.length === 0 ? (
-            <Card className="rounded-xl border border-dashed border-white/[0.1] bg-[#18191e] py-0 shadow-none ring-0">
+            <Card className="rounded-xl border border-dashed border-border bg-surface py-0 shadow-none ring-0">
               <CardContent className="flex flex-col items-center justify-center gap-3 px-6 py-12 text-center">
-                <div className="flex size-10 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.04]">
+                <div className="flex size-10 items-center justify-center rounded-lg border border-border bg-white/[0.04]">
                   <FolderIcon className="size-5 text-indigo-400" />
                 </div>
                 <div className="space-y-1">
-                  <h2 className="text-sm font-semibold text-white">
+                  <h2 className="text-sm font-semibold text-foreground">
                     {t("projects.emptyTitle")}
                   </h2>
-                  <p className="text-xs text-[#8a8b98]">
+                  <p className="text-xs text-muted-foreground">
                     {t("projects.emptyDescription")}
                   </p>
                 </div>
                 <Button
                   type="button"
                   onClick={() => setIsCreateOpen(true)}
-                  className="mt-1 inline-flex h-auto items-center gap-1.5 rounded-lg bg-[#6366f1] px-3.5 py-1.5 text-[13px] font-medium text-white shadow-sm transition-colors hover:bg-[#5558e6]"
+                  className="mt-1 inline-flex h-auto items-center gap-1.5 rounded-lg bg-accent px-3.5 py-1.5 text-[13px] font-medium text-accent-foreground shadow-sm transition-colors hover:bg-accent-hover"
                 >
                   <PlusIcon className="size-3.5" />
                   {t("projects.newProject")}

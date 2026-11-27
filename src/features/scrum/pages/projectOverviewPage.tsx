@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CircleAlertIcon } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -10,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ApiError } from "@/shared/types/error";
+import { InviteMemberDialog } from "../components/project/InviteMemberDialog";
 import { ProjectOverviewHeader } from "../components/project/overview/ProjectOverviewHeader";
 import { ProjectOverviewStats } from "../components/project/overview/ProjectOverviewStats";
 import { ProjectWorkspacesGrid } from "../components/project/overview/ProjectWorkspacesGrid";
@@ -20,6 +22,7 @@ export const ProjectOverviewPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { data: project, isLoading, isError, error, refetch } = useProjectDetail(id);
+  const [isInviteOpen, setIsInviteOpen] = useState(false);
 
   const errorCode =
     error instanceof ApiError
@@ -100,9 +103,17 @@ export const ProjectOverviewPage = () => {
 
   return (
     <div className="mx-auto max-w-6xl space-y-6">
-      <ProjectOverviewHeader project={project} />
+      <ProjectOverviewHeader
+        project={project}
+        onInviteClick={() => setIsInviteOpen(true)}
+      />
       <ProjectOverviewStats project={project} />
       <ProjectWorkspacesGrid project={project} />
+      <InviteMemberDialog
+        open={isInviteOpen}
+        onOpenChange={setIsInviteOpen}
+        project={project}
+      />
     </div>
   );
 };

@@ -16,9 +16,20 @@
 
   --surface: #ffffff;
   --surface-foreground: #000000;
+  --surface-elevated: #f4f4f5;
+  --surface-subtle: #e5e5e5;
+  --surface-inset: #fafafa;
+  --modal: #ffffff;
 
   --popover: #ffffff;
   --popover-foreground: #000000;
+
+  --accent: #6366f1;
+  --accent-hover: #5558e6;
+  --accent-foreground: #ffffff;
+
+  --foreground-secondary: #27272a;
+  --foreground-subtle: #52525b;
 
   --border: #e5e5e5;
   --input: #e5e5e5;
@@ -64,9 +75,20 @@
 
   --surface: #18191e;
   --surface-foreground: #f4f4f5;
+  --surface-elevated: #1d1e25;
+  --surface-subtle: #232429;
+  --surface-inset: #101116;
+  --modal: #16171c;
 
   --popover: #1b1c22;
   --popover-foreground: #f4f4f5;
+
+  --accent: #6366f1;
+  --accent-hover: #5558e6;
+  --accent-foreground: #ffffff;
+
+  --foreground-secondary: #d4d4d8;
+  --foreground-subtle: #a1a1aa;
 
   --muted: #262626;
   --muted-foreground: #8a8b98;
@@ -114,9 +136,20 @@
 
   --color-surface: var(--surface);
   --color-surface-foreground: var(--surface-foreground);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-surface-inset: var(--surface-inset);
+  --color-modal: var(--modal);
 
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-subtle: var(--foreground-subtle);
 
   --color-border: var(--border);
   --color-input: var(--input);

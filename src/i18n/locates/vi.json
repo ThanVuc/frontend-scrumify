@@ -103,6 +103,27 @@
       "sprintsDefaultSubtitle": "Bảng sprint và lập kế hoạch vòng lặp",
       "epicsTitle": "Epics",
       "epicsSubtitle": "Các sáng kiến và nhóm PBI cấp cao"
+    },
+    "inviteModal": {
+      "headerTitle": "Mời thành viên",
+      "title": "Mời thành viên vào {{name}}",
+      "subtitle": "Mời cộng tác viên qua email để giao PBI, quản lý công việc và lập kế hoạch sprint.",
+      "emailPlaceholder": "Nhập các địa chỉ email cách nhau bằng dấu phẩy hoặc khoảng trắng...",
+      "enterKey": "Enter",
+      "roleMember": "Thành viên",
+      "removeMember": "Xóa {{email}}",
+      "createMore": "Mời thêm",
+      "submit": "Mời thành viên",
+      "submitting": "Đang mời...",
+      "errorTitle": "Mời thành viên thất bại",
+      "successTitle": "Đã mời thành viên",
+      "successDescription_one": "Đã mời {{count}} thành viên vào {{project}}.",
+      "successDescription_other": "Đã mời {{count}} thành viên vào {{project}}.",
+      "invalidEmailError": "Địa chỉ email không hợp lệ: {{emails}}",
+      "alreadyAddedInfo": "Tất cả email đã nhập đều có trong danh sách chờ mời.",
+      "notFoundLabel": "Không tìm thấy",
+      "notFoundWarning": "Không tìm thấy người dùng đang hoạt động cho: {{emails}}",
+      "lookupError": "Không thể kiểm tra địa chỉ email. Vui lòng thử lại."
     }
   }
 }

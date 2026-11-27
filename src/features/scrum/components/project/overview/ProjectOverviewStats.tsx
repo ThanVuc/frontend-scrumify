@@ -110,16 +110,16 @@ export const ProjectOverviewStats = ({
       {cards.map((card) => (
         <Card
           key={card.id}
-          className="rounded-xl border border-white/[0.08] bg-[#18191e] py-0 shadow-none ring-0"
+          className="rounded-xl border border-border bg-surface py-0 shadow-none ring-0"
         >
           <CardContent className="flex flex-col gap-1.5 p-4">
-            <span className="text-[11px] font-medium uppercase tracking-wider text-[#8a8b98]">
+            <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
               {card.label}
             </span>
-            <span className="truncate text-lg font-semibold tracking-tight text-white">
+            <span className="truncate text-lg font-semibold tracking-tight text-foreground">
               {card.value}
             </span>
-            <span className="truncate text-xs text-[#8a8b98]">
+            <span className="truncate text-xs text-muted-foreground">
               {card.subtitle}
             </span>
           </CardContent>

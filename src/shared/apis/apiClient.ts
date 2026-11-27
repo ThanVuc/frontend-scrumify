@@ -2,8 +2,10 @@ import { ApiError, type ApiErrorResponse } from "../types/error";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api/v1";
 
+type QueryParamPrimitive = string | number | boolean;
+
 type ApiRequestOptions = Omit<RequestInit, "body"> & {
-    query?: Record<string, string | number | boolean | undefined>;
+    query?: Record<string, QueryParamPrimitive | QueryParamPrimitive[] | undefined>;
     body?: unknown;
 };
 
@@ -17,7 +19,11 @@ export const apiClient = async (
 
     if (query) {
         Object.entries(query).forEach(([key, value]) => {
-            if (value !== undefined) {
+            if (Array.isArray(value)) {
+                value.forEach((item) => {
+                    url.searchParams.append(key, String(item));
+                });
+            } else if (value !== undefined) {
                 url.searchParams.set(key, String(value));
             }
         });

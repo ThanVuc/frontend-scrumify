@@ -14,7 +14,7 @@ export const CreateProjectDialog = ({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         showCloseButton={false}
-        className="gap-0 overflow-hidden rounded-xl border border-white/[0.08] bg-[#16171c] p-0 shadow-2xl ring-0 sm:max-w-2xl"
+        className="gap-0 overflow-hidden rounded-xl border border-border bg-modal p-0 shadow-2xl ring-0 sm:max-w-2xl"
       >
         {open && (
           <CreateProjectForm onClose={() => onOpenChange(false)} />

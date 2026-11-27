@@ -72,10 +72,10 @@ export const ProjectWorkspacesGrid = ({
   return (
     <section className="space-y-3">
       <div className="flex items-center justify-between">
-        <h2 className="text-[11px] font-semibold uppercase tracking-wider text-[#8a8b98]">
+        <h2 className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
           {t("projectOverview.workspaces.heading")}
         </h2>
-        <span className="text-xs text-[#8a8b98]">
+        <span className="text-xs text-muted-foreground">
           {t("projectOverview.workspaces.areasCount", {
             count: workspaces.length,
           })}
@@ -98,32 +98,32 @@ export const ProjectWorkspacesGrid = ({
                   navigate(workspace.path);
                 }
               }}
-              className="cursor-pointer rounded-xl border border-white/[0.08] bg-[#18191e] py-0 shadow-none ring-0 transition-all hover:border-white/[0.14] hover:bg-[#1d1e25] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="cursor-pointer rounded-xl border border-border bg-surface py-0 shadow-none ring-0 transition-all hover:border-foreground/15 hover:bg-surface-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <CardContent className="flex items-center justify-between gap-3 px-4 py-3.5">
                 <div className="flex min-w-0 items-center gap-3.5">
-                  <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.04]">
+                  <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-border bg-white/[0.04]">
                     <Icon className={cn("size-4", workspace.iconClass)} />
                   </div>
 
                   <div className="min-w-0">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-semibold text-white">
+                      <span className="text-sm font-semibold text-foreground">
                         {workspace.title}
                       </span>
                       {workspace.badge && (
-                        <span className="rounded-full border border-white/[0.08] bg-white/[0.05] px-2 py-0.5 text-[11px] leading-none font-medium text-[#a1a1aa]">
+                        <span className="rounded-full border border-border bg-white/[0.05] px-2 py-0.5 text-[11px] leading-none font-medium text-foreground-subtle">
                           {workspace.badge}
                         </span>
                       )}
                     </div>
-                    <p className="mt-0.5 truncate text-xs text-[#8a8b98]">
+                    <p className="mt-0.5 truncate text-xs text-muted-foreground">
                       {workspace.subtitle}
                     </p>
                   </div>
                 </div>
 
-                <ChevronRightIcon className="size-4 shrink-0 text-[#8a8b98]" />
+                <ChevronRightIcon className="size-4 shrink-0 text-muted-foreground" />
               </CardContent>
             </Card>
           );

@@ -25,10 +25,10 @@ export const ProjectsHeader = ({
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-3 border-b border-white/[0.08] pb-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-3 border-b border-border pb-4 sm:flex-row sm:items-center sm:justify-between">
       <div className="space-y-1">
         <div className="flex flex-wrap items-center gap-2">
-          <h1 className="mr-1 text-xl font-semibold tracking-tight text-white">
+          <h1 className="mr-1 text-xl font-semibold tracking-tight text-foreground">
             {t("projects.title")}
           </h1>
 
@@ -44,7 +44,7 @@ export const ProjectsHeader = ({
             stats?.map((stat) => (
               <span
                 key={stat.id}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-[#18191e] px-2.5 py-0.5 text-xs"
+                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs"
               >
                 <span
                   aria-hidden="true"
@@ -53,18 +53,18 @@ export const ProjectsHeader = ({
                     STAT_DOT_COLOR_MAP[stat.icon],
                   )}
                 />
-                <span className="font-semibold text-white">{stat.value}</span>
-                <span className="text-[#8a8b98]">{stat.label}</span>
+                <span className="font-semibold text-foreground">{stat.value}</span>
+                <span className="text-muted-foreground">{stat.label}</span>
               </span>
             ))}
         </div>
-        <p className="text-xs text-[#8a8b98]">{t("projects.subtitle")}</p>
+        <p className="text-xs text-muted-foreground">{t("projects.subtitle")}</p>
       </div>
 
       <div className="flex shrink-0 items-center gap-2.5">
         <Button
           onClick={onCreateClick}
-          className="inline-flex h-auto items-center gap-1.5 rounded-full bg-[#6366f1] px-4 py-1.5 text-[13px] font-medium text-white shadow-sm transition-colors hover:bg-[#5558e6]"
+          className="inline-flex h-auto items-center gap-1.5 rounded-full bg-accent px-4 py-1.5 text-[13px] font-medium text-accent-foreground shadow-sm transition-colors hover:bg-accent-hover"
         >
           <PlusIcon className="size-3.5" />
           {t("projects.newProject")}

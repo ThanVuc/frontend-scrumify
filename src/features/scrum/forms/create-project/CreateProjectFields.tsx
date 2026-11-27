@@ -48,7 +48,7 @@ export const CreateProjectFields = ({
                 }}
                 placeholder={t("projects.create.namePlaceholder")}
                 aria-label={t("projects.create.nameLabel")}
-                className="w-full bg-transparent text-lg font-semibold tracking-tight text-white outline-none placeholder:text-[#8a8b98]/60"
+                className="w-full bg-transparent text-lg font-semibold tracking-tight text-foreground outline-none placeholder:text-muted-foreground/60"
               />
 
               {isInvalid && (
@@ -83,7 +83,7 @@ export const CreateProjectFields = ({
                 placeholder={t("projects.create.descriptionPlaceholder")}
                 aria-label={t("projects.create.descriptionLabel")}
                 rows={3}
-                className="min-h-[76px] w-full resize-none bg-transparent text-sm leading-relaxed text-[#a1a1aa] outline-none placeholder:text-[#8a8b98]/50"
+                className="min-h-[76px] w-full resize-none bg-transparent text-sm leading-relaxed text-foreground-subtle outline-none placeholder:text-muted-foreground/50"
               />
 
               {isInvalid && (
@@ -97,7 +97,7 @@ export const CreateProjectFields = ({
         }}
       />
 
-      <div className="mt-4 border-t border-white/[0.08] pt-4">
+      <div className="mt-4 border-t border-border pt-4">
         <form.Field
           name="codePrefix"
           children={(field) => {
@@ -111,9 +111,9 @@ export const CreateProjectFields = ({
                   {t("projects.create.keyPrefix")}
                 </FieldLabel>
 
-                <div className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/[0.08] bg-[#1d1e25] px-3 py-1.5 text-xs">
-                  <HashIcon className="size-3.5 text-[#8a8b98]" />
-                  <span className="font-mono text-[#a1a1aa]">
+                <div className="inline-flex w-fit items-center gap-2 rounded-lg border border-border bg-surface-elevated px-3 py-1.5 text-xs">
+                  <HashIcon className="size-3.5 text-muted-foreground" />
+                  <span className="font-mono text-foreground-subtle">
                     {t("projects.create.keyLabel")}
                   </span>
                   <input
@@ -136,9 +136,9 @@ export const CreateProjectFields = ({
                     style={{
                       width: `${Math.max(previewPrefix.length, 3)}ch`,
                     }}
-                    className="bg-transparent font-mono font-semibold text-[#818cf8] uppercase outline-none placeholder:text-[#818cf8]/40"
+                    className="bg-transparent font-mono font-semibold text-info uppercase outline-none placeholder:text-info/40"
                   />
-                  <span className="text-[#8a8b98]">
+                  <span className="text-muted-foreground">
                     {t("projects.create.keyHint", { prefix: previewPrefix })}
                   </span>
                 </div>

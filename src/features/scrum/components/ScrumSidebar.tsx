@@ -64,10 +64,10 @@ export const ScrumSidebar = ({
     <Sidebar collapsible="icon">
       <SidebarHeader className="p-3">
         <div className="flex items-center gap-2.5 px-2.5 py-2 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:px-0">
-          <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[#6366f1] text-xs font-semibold text-white">
+          <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-semibold text-accent-foreground">
             S
           </div>
-          <span className="truncate text-sm font-semibold text-white group-data-[collapsible=icon]:hidden">
+          <span className="truncate text-sm font-semibold text-foreground group-data-[collapsible=icon]:hidden">
             Scrumify
           </span>
         </div>
@@ -86,7 +86,7 @@ export const ScrumSidebar = ({
                       tooltip={label}
                       isActive={item.path === activePath}
                       onClick={() => onSelectItem(item.path)}
-                      className="rounded-lg text-[13px] font-medium text-[#8a8b98] transition-colors hover:bg-white/[0.04] hover:text-white data-active:bg-white/[0.07] data-active:text-white"
+                      className="rounded-lg text-[13px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.04] hover:text-foreground data-active:bg-white/[0.07] data-active:text-foreground"
                     >
                       <span
                         aria-hidden="true"
@@ -115,43 +115,43 @@ export const ScrumSidebar = ({
                   />
                 }
               >
-                <div className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-[#232429] text-[#8a8b98]">
+                <div className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-subtle text-muted-foreground">
                   <UserIcon className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left leading-tight group-data-[collapsible=icon]:hidden">
-                  <span className="truncate text-[13px] font-medium text-white">
+                  <span className="truncate text-[13px] font-medium text-foreground">
                     Sinh nguyen
                   </span>
-                  <span className="truncate text-[11px] text-[#8a8b98]">
+                  <span className="truncate text-[11px] text-muted-foreground">
                     Lead Engineer • Admin
                   </span>
                 </div>
-                <MoreHorizontalIcon className="ml-auto size-4 text-[#8a8b98] group-data-[collapsible=icon]:hidden" />
+                <MoreHorizontalIcon className="ml-auto size-4 text-muted-foreground group-data-[collapsible=icon]:hidden" />
               </DropdownMenuTrigger>
 
               <DropdownMenuContent
                 side="right"
                 align="end"
                 sideOffset={12}
-                className="w-56 rounded-xl border border-white/10 bg-[#1b1c22] p-1.5 shadow-2xl"
+                className="w-56 rounded-xl border border-border bg-popover p-1.5 shadow-2xl"
               >
                 <div className="px-2.5 py-1.5">
-                  <p className="truncate text-[13px] font-medium text-white">
+                  <p className="truncate text-[13px] font-medium text-foreground">
                     Sinh nguyen
                   </p>
-                  <p className="truncate font-mono text-xs text-[#8a8b98]">
+                  <p className="truncate font-mono text-xs text-muted-foreground">
                     sinh.nguyen@work.io
                   </p>
                 </div>
 
                 <DropdownMenuSeparator />
 
-                <DropdownMenuItem className="gap-2.5 rounded-lg px-2.5 py-1.5 text-[13px] text-[#d4d4d8] focus:bg-white/[0.06] focus:text-white">
-                  <CircleUserIcon className="size-4 text-[#6366f1]" />
+                <DropdownMenuItem className="gap-2.5 rounded-lg px-2.5 py-1.5 text-[13px] text-foreground-secondary focus:bg-white/[0.06] focus:text-foreground">
+                  <CircleUserIcon className="size-4 text-accent" />
                   <span>{t("nav.profile")}</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="gap-2.5 rounded-lg px-2.5 py-1.5 text-[13px] text-[#d4d4d8] focus:bg-white/[0.06] focus:text-white">
-                  <SlidersHorizontalIcon className="size-4 text-[#8a8b98]" />
+                <DropdownMenuItem className="gap-2.5 rounded-lg px-2.5 py-1.5 text-[13px] text-foreground-secondary focus:bg-white/[0.06] focus:text-foreground">
+                  <SlidersHorizontalIcon className="size-4 text-muted-foreground" />
                   <span>{t("nav.settings")}</span>
                 </DropdownMenuItem>
 

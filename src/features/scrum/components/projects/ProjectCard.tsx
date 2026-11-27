@@ -99,7 +99,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           openProject();
         }
       }}
-      className="cursor-pointer rounded-xl border border-white/[0.08] bg-[#18191e] py-0 shadow-none ring-0 transition-all hover:border-white/[0.14] hover:bg-[#1d1e25] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="cursor-pointer rounded-xl border border-border bg-surface py-0 shadow-none ring-0 transition-all hover:border-foreground/15 hover:bg-surface-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     >
       <CardContent className="flex items-center justify-between gap-4 px-5 py-4">
         <div
@@ -108,33 +108,33 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             project.description ? "items-start" : "items-center",
           )}
         >
-          <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.04]">
+          <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-border bg-white/[0.04]">
             <LayersIcon className="size-4 text-indigo-400" />
           </div>
 
           <div className="min-w-0">
-            <h2 className="truncate text-[15px] font-semibold text-white">
+            <h2 className="truncate text-[15px] font-semibold text-foreground">
               {project.name}
             </h2>
 
             {project.description && (
-              <p className="mt-0.5 truncate text-[13px] text-[#8a8b98]">
+              <p className="mt-0.5 truncate text-[13px] text-muted-foreground">
                 {project.description}
               </p>
             )}
 
-            <div className="mt-1.5 flex flex-wrap items-center gap-3 text-xs text-[#8a8b98]">
+            <div className="mt-1.5 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
                 {project.activeSprint ? (
                   <RefreshCwIcon className="size-3.5 text-sky-400" />
                 ) : (
-                  <CalendarIcon className="size-3.5 text-[#8a8b98]" />
+                  <CalendarIcon className="size-3.5 text-muted-foreground" />
                 )}
                 {scheduleLabel}
               </span>
               <span aria-hidden="true">•</span>
               <span className="inline-flex items-center gap-1.5">
-                <CircleCheckIcon className="size-3.5 text-[#8a8b98]" />
+                <CircleCheckIcon className="size-3.5 text-muted-foreground" />
                 {t("projects.card.pbisCount", {
                   active: project.activePBIsCount,
                   total: project.totalPBIsCount,
@@ -146,7 +146,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <div className="flex shrink-0 items-center gap-3">
           {visibleMembers.length > 0 && (
-            <AvatarGroup className="*:data-[slot=avatar]:size-6 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-[#18191e]">
+            <AvatarGroup className="*:data-[slot=avatar]:size-6 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-surface">
               {visibleMembers.map((member) => (
                 <Avatar key={member.id} size="sm" title={member.name}>
                   <AvatarFallback
@@ -160,7 +160,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 </Avatar>
               ))}
               {extraMembersCount > 0 && (
-                <AvatarGroupCount className="size-6 bg-[#232429] text-[10px] font-semibold text-[#d4d4d8] ring-2 ring-[#18191e]">
+                <AvatarGroupCount className="size-6 bg-surface-subtle text-[10px] font-semibold text-foreground-secondary ring-2 ring-surface">
                   +{extraMembersCount}
                 </AvatarGroupCount>
               )}
@@ -175,7 +175,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             onClick={(event) => {
               event.stopPropagation();
             }}
-            className="rounded-md p-1.5 text-[#8a8b98] transition-colors hover:bg-white/[0.06] hover:text-white"
+            className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground"
           >
             <MoreHorizontalIcon className="size-4" />
           </Button>

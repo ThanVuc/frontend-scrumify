@@ -103,6 +103,27 @@
       "sprintsDefaultSubtitle": "Sprint board & iteration planning",
       "epicsTitle": "Epics",
       "epicsSubtitle": "Initiatives and high-level PBI groupings"
+    },
+    "inviteModal": {
+      "headerTitle": "Invite members",
+      "title": "Invite team members to {{name}}",
+      "subtitle": "Invite collaborators via email to assign PBIs, manage tasks, and plan sprints.",
+      "emailPlaceholder": "Add email addresses separated by commas or spaces...",
+      "enterKey": "Enter",
+      "roleMember": "Member",
+      "removeMember": "Remove {{email}}",
+      "createMore": "Create more",
+      "submit": "Invite members",
+      "submitting": "Inviting...",
+      "errorTitle": "Failed to invite members",
+      "successTitle": "Members invited",
+      "successDescription_one": "Invited {{count}} member to {{project}}.",
+      "successDescription_other": "Invited {{count}} members to {{project}}.",
+      "invalidEmailError": "Invalid email address(es): {{emails}}",
+      "alreadyAddedInfo": "All entered email addresses are already in the invite list.",
+      "notFoundLabel": "Not found",
+      "notFoundWarning": "No active user found for: {{emails}}",
+      "lookupError": "Unable to verify email addresses. Please try again."
     }
   }
 }

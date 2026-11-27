@@ -132,14 +132,14 @@ export const ProjectSidebar = ({
     <Sidebar collapsible="icon">
       {isCollapsed ? (
         <>
-          <SidebarHeader className="border-b border-white/[0.08] px-0 py-3">
+          <SidebarHeader className="border-b border-border px-0 py-3">
             <div className="flex flex-col items-center gap-2.5">
               <button
                 type="button"
                 onClick={onBackToProjects}
                 title={t("projectNav.backToProjects")}
                 aria-label={t("projectNav.backToProjects")}
-                className="flex size-8 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.04] text-white transition-colors hover:bg-white/[0.08]"
+                className="flex size-8 items-center justify-center rounded-lg border border-border bg-white/[0.04] text-foreground transition-colors hover:bg-white/[0.08]"
               >
                 <LayersIcon className="size-4" />
               </button>
@@ -150,7 +150,7 @@ export const ProjectSidebar = ({
                 size="icon-sm"
                 aria-label={t("common.new")}
                 title={`${t("common.new")} (C)`}
-                className="size-8 rounded-lg border border-white/[0.08] bg-white/[0.06] text-white hover:bg-white/[0.1]"
+                className="size-8 rounded-lg border border-border bg-white/[0.06] text-foreground hover:bg-white/[0.1]"
               >
                 <PlusIcon className="size-4" />
               </Button>
@@ -161,7 +161,7 @@ export const ProjectSidebar = ({
                 size="icon-sm"
                 aria-label={t("projectNav.notifications")}
                 title={t("projectNav.notifications")}
-                className="relative size-8 text-[#8a8b98] hover:bg-white/[0.06] hover:text-white"
+                className="relative size-8 text-muted-foreground hover:bg-white/[0.06] hover:text-foreground"
               >
                 <BellIcon className="size-4" />
                 <span
@@ -184,7 +184,7 @@ export const ProjectSidebar = ({
                       tooltip={item.title}
                       isActive={isActive}
                       onClick={() => onSelectItem(item.path)}
-                      className="relative justify-center rounded-lg text-[#8a8b98] transition-colors hover:bg-white/[0.06] hover:text-white data-active:bg-white/[0.08] data-active:text-white"
+                      className="relative justify-center rounded-lg text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground data-active:bg-white/[0.08] data-active:text-foreground"
                     >
                       <Icon className="size-4" />
                       {item.hasDot && (
@@ -211,10 +211,10 @@ export const ProjectSidebar = ({
                 title={t("projectNav.backToProjects")}
                 className="flex items-center gap-2.5 rounded-lg px-1 py-0.5 text-left transition-colors hover:bg-white/[0.04]"
               >
-                <div className="flex size-7 shrink-0 items-center justify-center rounded-lg border border-[#6366f1]/30 bg-[#6366f1]/15 text-[#818cf8]">
+                <div className="flex size-7 shrink-0 items-center justify-center rounded-lg border border-accent/30 bg-accent/15 text-info">
                   <LayersIcon className="size-4" />
                 </div>
-                <span className="truncate text-sm font-semibold text-white">
+                <span className="truncate text-sm font-semibold text-foreground">
                   {t("common.appName")}
                 </span>
               </button>
@@ -224,7 +224,7 @@ export const ProjectSidebar = ({
                 variant="ghost"
                 size="icon-sm"
                 aria-label={t("projectNav.notifications")}
-                className="relative text-[#8a8b98] hover:bg-white/[0.06] hover:text-white"
+                className="relative text-muted-foreground hover:bg-white/[0.06] hover:text-foreground"
               >
                 <BellIcon className="size-4" />
                 <span
@@ -239,20 +239,20 @@ export const ProjectSidebar = ({
             <div className="px-1 pb-3">
               <button
                 type="button"
-                className="flex w-full items-center justify-between rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-[13px] font-medium text-white transition-colors hover:bg-white/[0.06]"
+                className="flex w-full items-center justify-between rounded-lg border border-border bg-white/[0.03] px-3 py-2 text-[13px] font-medium text-foreground transition-colors hover:bg-white/[0.06]"
               >
                 <span className="flex items-center gap-2">
-                  <PlusIcon className="size-4 shrink-0 text-[#d4d4d8]" />
+                  <PlusIcon className="size-4 shrink-0 text-foreground-secondary" />
                   <span>{t("common.new")}</span>
                 </span>
-                <kbd className="rounded border border-white/10 bg-white/[0.04] px-1.5 py-0.5 font-mono text-[11px] leading-none text-[#8a8b98]">
+                <kbd className="rounded border border-border bg-white/[0.04] px-1.5 py-0.5 font-mono text-[11px] leading-none text-muted-foreground">
                   C
                 </kbd>
               </button>
             </div>
 
             <SidebarGroup className="px-1 py-0">
-              <SidebarGroupLabel className="px-2 text-[11px] font-semibold uppercase tracking-wider text-[#8a8b98]/80">
+              <SidebarGroupLabel className="px-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/80">
                 {t("projectNav.workspace")}
               </SidebarGroupLabel>
 
@@ -263,14 +263,14 @@ export const ProjectSidebar = ({
                       tooltip={t("projectNav.overview")}
                       isActive={activePath === basePath}
                       onClick={() => onSelectItem(basePath)}
-                      className="rounded-lg text-[13px] font-medium text-[#a1a1aa] transition-colors hover:bg-white/[0.04] hover:text-white data-active:border data-active:border-white/[0.08] data-active:bg-white/[0.07] data-active:text-white"
+                      className="rounded-lg text-[13px] font-medium text-foreground-subtle transition-colors hover:bg-white/[0.04] hover:text-foreground data-active:border data-active:border-border data-active:bg-white/[0.07] data-active:text-foreground"
                     >
                       <LayoutGridIcon
                         className={cn(
                           "size-4",
                           activePath === basePath
-                            ? "text-[#818cf8]"
-                            : "text-[#8a8b98]",
+                            ? "text-info"
+                            : "text-muted-foreground",
                         )}
                       />
                       <span>{t("projectNav.overview")}</span>
@@ -281,20 +281,20 @@ export const ProjectSidebar = ({
                     <SidebarMenuButton
                       tooltip={t("projectNav.productBacklog")}
                       onClick={() => setIsBacklogOpen((prev) => !prev)}
-                      className="rounded-lg text-[13px] font-medium text-[#d4d4d8] transition-colors hover:bg-white/[0.04] hover:text-white"
+                      className="rounded-lg text-[13px] font-medium text-foreground-secondary transition-colors hover:bg-white/[0.04] hover:text-foreground"
                     >
-                      <SlidersHorizontalIcon className="size-4 text-[#8a8b98]" />
+                      <SlidersHorizontalIcon className="size-4 text-muted-foreground" />
                       <span>{t("projectNav.productBacklog")}</span>
                       <ChevronDownIcon
                         className={cn(
-                          "ml-auto size-4 text-[#8a8b98] transition-transform duration-200",
+                          "ml-auto size-4 text-muted-foreground transition-transform duration-200",
                           !isBacklogOpen && "-rotate-90",
                         )}
                       />
                     </SidebarMenuButton>
 
                     {isBacklogOpen && (
-                      <SidebarMenuSub className="mt-1 border-white/[0.08] py-0.5">
+                      <SidebarMenuSub className="mt-1 border-border py-0.5">
                         {backlogItems.map((item) => {
                           const Icon = item.icon;
                           const isActive = activePath === item.path;
@@ -305,14 +305,14 @@ export const ProjectSidebar = ({
                                 render={<button type="button" />}
                                 isActive={isActive}
                                 onClick={() => onSelectItem(item.path)}
-                                className="h-8 w-full cursor-pointer rounded-md px-2.5 text-[13px] text-[#a1a1aa] transition-colors hover:bg-white/[0.04] hover:text-white data-active:bg-white/[0.07] data-active:text-white"
+                                className="h-8 w-full cursor-pointer rounded-md px-2.5 text-[13px] text-foreground-subtle transition-colors hover:bg-white/[0.04] hover:text-foreground data-active:bg-white/[0.07] data-active:text-foreground"
                               >
                                 <Icon
                                   className={cn(
                                     "size-4",
                                     isActive
-                                      ? "text-[#818cf8]"
-                                      : "text-[#8a8b98]",
+                                      ? "text-info"
+                                      : "text-muted-foreground",
                                   )}
                                 />
                                 <span>{item.title}</span>
@@ -328,20 +328,20 @@ export const ProjectSidebar = ({
                     <SidebarMenuButton
                       tooltip={t("projectNav.sprints")}
                       onClick={() => setIsSprintsOpen((prev) => !prev)}
-                      className="rounded-lg text-[13px] font-medium text-[#d4d4d8] transition-colors hover:bg-white/[0.04] hover:text-white"
+                      className="rounded-lg text-[13px] font-medium text-foreground-secondary transition-colors hover:bg-white/[0.04] hover:text-foreground"
                     >
-                      <CalendarIcon className="size-4 text-[#8a8b98]" />
+                      <CalendarIcon className="size-4 text-muted-foreground" />
                       <span>{t("projectNav.sprints")}</span>
                       <ChevronDownIcon
                         className={cn(
-                          "ml-auto size-4 text-[#8a8b98] transition-transform duration-200",
+                          "ml-auto size-4 text-muted-foreground transition-transform duration-200",
                           !isSprintsOpen && "-rotate-90",
                         )}
                       />
                     </SidebarMenuButton>
 
                     {isSprintsOpen && (
-                      <SidebarMenuSub className="mt-1 border-white/[0.08] py-0.5">
+                      <SidebarMenuSub className="mt-1 border-border py-0.5">
                         {sprintItems.map((item) => {
                           const Icon = item.icon;
                           const isActive = activePath === item.path;
@@ -352,14 +352,14 @@ export const ProjectSidebar = ({
                                 render={<button type="button" />}
                                 isActive={isActive}
                                 onClick={() => onSelectItem(item.path)}
-                                className="h-8 w-full cursor-pointer rounded-md px-2.5 text-[13px] text-[#a1a1aa] transition-colors hover:bg-white/[0.04] hover:text-white data-active:bg-white/[0.07] data-active:text-white"
+                                className="h-8 w-full cursor-pointer rounded-md px-2.5 text-[13px] text-foreground-subtle transition-colors hover:bg-white/[0.04] hover:text-foreground data-active:bg-white/[0.07] data-active:text-foreground"
                               >
                                 <Icon
                                   className={cn(
                                     "size-4",
                                     isActive
-                                      ? "text-[#818cf8]"
-                                      : "text-[#8a8b98]",
+                                      ? "text-info"
+                                      : "text-muted-foreground",
                                   )}
                                 />
                                 <span>{item.title}</span>
