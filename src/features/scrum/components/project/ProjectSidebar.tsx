@@ -38,7 +38,7 @@ export const getProjectSectionTitleKey = (
 ) => {
   const basePath = `/projects/${projectId}`;
 
-  if (pathname === `${basePath}/pbis`) {
+  if (pathname.startsWith(`${basePath}/pbis`)) {
     return "projectNav.allPbis" as const;
   }
   if (pathname === `${basePath}/tasks`) {

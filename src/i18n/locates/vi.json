@@ -125,5 +125,88 @@
       "notFoundWarning": "Không tìm thấy người dùng đang hoạt động cho: {{emails}}",
       "lookupError": "Không thể kiểm tra địa chỉ email. Vui lòng thử lại."
     }
+  },
+  "pbi": {
+    "status": {
+      "TODO": "Cần làm",
+      "INPROGRESS": "Đang làm",
+      "INREVIEW": "Đang duyệt",
+      "DONE": "Hoàn thành"
+    },
+    "type": {
+      "feature": "Tính năng",
+      "bug": "Lỗi",
+      "technical": "Kỹ thuật"
+    },
+    "priority": {
+      "LOW": "Thấp",
+      "MEDIUM": "Trung bình",
+      "HIGH": "Cao",
+      "HIGHEST": "Rất cao"
+    },
+    "fields": {
+      "type": "Loại",
+      "status": "Trạng thái",
+      "priority": "Độ ưu tiên",
+      "sprint": "Sprint",
+      "noSprint": "Chưa gán Sprint",
+      "storyPoints": "Story Point",
+      "epic": "Epic",
+      "noEpic": "Chưa gán Epic"
+    },
+    "list": {
+      "title": "Product Backlog",
+      "subtitle": "Ưu tiên, tinh chỉnh và sắp xếp các mục backlog cho các sprint sắp tới.",
+      "filterLabel": "Lọc",
+      "filterStatus": "Trạng thái",
+      "filterType": "Loại",
+      "filterEpic": "Epic",
+      "allStatuses": "Tất cả trạng thái",
+      "allTypes": "Tất cả loại",
+      "allEpics": "Tất cả Epic",
+      "clearFilters": "Xóa lọc",
+      "searchPlaceholder": "Tìm kiếm PBI...",
+      "moveToTop": "Đưa lên đầu",
+      "moveToTopAria": "Đưa {{code}} lên đầu backlog",
+      "movedToTop": "Đã đưa PBI lên đầu backlog",
+      "loadErrorTitle": "Không thể tải Product Backlog",
+      "emptyTitle": "Chưa có mục backlog nào",
+      "emptyDescription": "Tạo Product Backlog Item đầu tiên để bắt đầu lập kế hoạch tính năng, lỗi và công việc kỹ thuật.",
+      "newPbi": "Tạo PBI"
+    },
+    "create": {
+      "headerTitle": "Tạo PBI mới",
+      "titleLabel": "Tiêu đề PBI",
+      "titlePlaceholder": "Tiêu đề PBI",
+      "descriptionLabel": "Mô tả PBI",
+      "descriptionPlaceholder": "Thêm chi tiết, tiêu chí nghiệm thu hoặc bối cảnh kỹ thuật...",
+      "pointsSuffix": "điểm",
+      "createMore": "Tạo thêm",
+      "submit": "Tạo PBI",
+      "submitting": "Đang tạo...",
+      "errorTitle": "Tạo PBI thất bại",
+      "successTitle": "Đã tạo PBI",
+      "successDescription": "Đã thêm {{code}} \"{{title}}\" vào backlog."
+    },
+    "detail": {
+      "clickToEdit": "Nhấn để chỉnh sửa",
+      "saving": "Đang lưu...",
+      "descriptionPlaceholder": "Thêm mô tả...",
+      "descriptionEditHint": "Nhấn Ctrl+Enter hoặc bấm ra ngoài để lưu, Esc để hủy",
+      "propertiesTitle": "Thuộc tính",
+      "spUnit": "SP",
+      "created": "Ngày tạo",
+      "updated": "Cập nhật",
+      "tasksTitle": "Công việc",
+      "addTask": "Thêm công việc",
+      "noTasks": "Chưa có công việc nào thuộc PBI này.",
+      "archive": "Lưu trữ",
+      "archivedTitle": "Đã lưu trữ PBI",
+      "archivedDescription": "{{code}} đã được lưu trữ.",
+      "loadErrorTitle": "Không thể tải thông tin PBI",
+      "backToBacklog": "Quay lại Backlog",
+      "updateErrorTitle": "Cập nhật PBI thất bại",
+      "updateError": "Không thể lưu thay đổi. Vui lòng thử lại."
+    }
   }
 }

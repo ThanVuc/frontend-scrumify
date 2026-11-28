@@ -1,6 +1,7 @@
 // RegisterForm.tsx
 import { CircleAlertIcon } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { CLIENT_ERROR_CODE } from "@/shared/constants";
 import { ApiError } from "@/shared/types/error";
 import { useRegisterForm } from "./register.form";
 
@@ -14,8 +15,8 @@ export const RegisterForm = () => {
 		registerMutation.error instanceof ApiError
 			? registerMutation.error.code
 			: registerMutation.error instanceof TypeError
-				? "NETWORK_ERROR"
-				: "UNKNOWN_ERROR";
+				? CLIENT_ERROR_CODE.NETWORK_ERROR
+				: CLIENT_ERROR_CODE.UNKNOWN_ERROR;
 
 	return (
 		<form

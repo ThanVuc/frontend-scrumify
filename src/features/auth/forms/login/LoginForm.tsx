@@ -1,6 +1,7 @@
 // LoginForm.tsx
 import { CircleAlertIcon } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { CLIENT_ERROR_CODE } from "@/shared/constants";
 import { ApiError } from "@/shared/types/error";
 import { useLoginForm } from "./login.form";
 
@@ -14,8 +15,8 @@ export const LoginForm = () => {
 		loginMutation.error instanceof ApiError
 			? loginMutation.error.code
 			: loginMutation.error instanceof TypeError
-				? "NETWORK_ERROR"
-				: "UNKNOWN_ERROR";
+				? CLIENT_ERROR_CODE.NETWORK_ERROR
+				: CLIENT_ERROR_CODE.UNKNOWN_ERROR;
 
 	return (
 		<form

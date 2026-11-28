@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { CLIENT_ERROR_CODE } from "@/shared/constants";
 import { ApiError } from "@/shared/types/error";
 import { InviteMemberDialog } from "../components/project/InviteMemberDialog";
 import { ProjectOverviewHeader } from "../components/project/overview/ProjectOverviewHeader";
@@ -28,8 +29,8 @@ export const ProjectOverviewPage = () => {
     error instanceof ApiError
       ? error.code
       : error instanceof TypeError
-        ? "NETWORK_ERROR"
-        : "UNKNOWN_ERROR";
+        ? CLIENT_ERROR_CODE.NETWORK_ERROR
+        : CLIENT_ERROR_CODE.UNKNOWN_ERROR;
 
   if (isLoading) {
     return (

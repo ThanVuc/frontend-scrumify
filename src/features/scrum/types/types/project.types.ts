@@ -1,4 +1,5 @@
 import type { z } from "zod";
+import type { PROJECT_STAT_ICON } from "../constants/scrum.constants";
 import type { createProjectSchema } from "../schema/createProject.schema";
 
 export type CreateProjectRequest = z.infer<typeof createProjectSchema>;
@@ -72,7 +73,8 @@ export interface ProjectDetailResponse {
   updatedAt: string;
 }
 
-export type ProjectStatIconType = "projects" | "pbis" | "contributors";
+export type ProjectStatIconType =
+  (typeof PROJECT_STAT_ICON)[keyof typeof PROJECT_STAT_ICON];
 
 export interface ProjectStat {
   id: string;

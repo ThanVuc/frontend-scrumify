@@ -125,5 +125,88 @@
       "notFoundWarning": "No active user found for: {{emails}}",
       "lookupError": "Unable to verify email addresses. Please try again."
     }
+  },
+  "pbi": {
+    "status": {
+      "TODO": "Todo",
+      "INPROGRESS": "In Progress",
+      "INREVIEW": "In Review",
+      "DONE": "Done"
+    },
+    "type": {
+      "feature": "Feature",
+      "bug": "Bug",
+      "technical": "Technical"
+    },
+    "priority": {
+      "LOW": "Low",
+      "MEDIUM": "Medium",
+      "HIGH": "High",
+      "HIGHEST": "Highest"
+    },
+    "fields": {
+      "type": "Type",
+      "status": "Status",
+      "priority": "Priority",
+      "sprint": "Sprint",
+      "noSprint": "No Sprint",
+      "storyPoints": "Story Point",
+      "epic": "Epic",
+      "noEpic": "No Epic"
+    },
+    "list": {
+      "title": "Product Backlog",
+      "subtitle": "Prioritize, refine, and organize product backlog items for upcoming sprints.",
+      "filterLabel": "Filter",
+      "filterStatus": "Status",
+      "filterType": "Type",
+      "filterEpic": "Epic",
+      "allStatuses": "All statuses",
+      "allTypes": "All types",
+      "allEpics": "All epics",
+      "clearFilters": "Clear",
+      "searchPlaceholder": "Search PBIs...",
+      "moveToTop": "Move to top",
+      "moveToTopAria": "Move {{code}} to top of backlog",
+      "movedToTop": "Moved PBI to top of backlog",
+      "loadErrorTitle": "Unable to load product backlog",
+      "emptyTitle": "No backlog items yet",
+      "emptyDescription": "Create your first Product Backlog Item to start planning features, bugs, and technical work.",
+      "newPbi": "New PBI"
+    },
+    "create": {
+      "headerTitle": "New PBI",
+      "titleLabel": "PBI title",
+      "titlePlaceholder": "PBI title",
+      "descriptionLabel": "PBI description",
+      "descriptionPlaceholder": "Add details, acceptance criteria, or technical context...",
+      "pointsSuffix": "pts",
+      "createMore": "Create more",
+      "submit": "Create PBI",
+      "submitting": "Creating...",
+      "errorTitle": "Failed to create PBI",
+      "successTitle": "PBI created",
+      "successDescription": "{{code}} \"{{title}}\" added to backlog."
+    },
+    "detail": {
+      "clickToEdit": "Click to edit",
+      "saving": "Saving...",
+      "descriptionPlaceholder": "Add a description...",
+      "descriptionEditHint": "Press Ctrl+Enter or click outside to save, Esc to cancel",
+      "propertiesTitle": "Properties",
+      "spUnit": "SP",
+      "created": "Created",
+      "updated": "Updated",
+      "tasksTitle": "Tasks",
+      "addTask": "Add Task",
+      "noTasks": "No tasks linked to this PBI yet.",
+      "archive": "Archive",
+      "archivedTitle": "PBI archived",
+      "archivedDescription": "{{code}} has been archived.",
+      "loadErrorTitle": "Unable to load PBI",
+      "backToBacklog": "Back to Backlog",
+      "updateErrorTitle": "Failed to update PBI",
+      "updateError": "Unable to save changes. Please try again."
+    }
   }
 }

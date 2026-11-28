@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { CircleAlertIcon, LayoutGridIcon } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { CLIENT_ERROR_CODE } from "@/shared/constants";
 import { ApiError } from "@/shared/types/error";
 import { ScrumModalHeader } from "../../components/ScrumModalHeader";
 import { useCreateProjectForm } from "./createProject.form";
@@ -26,8 +27,8 @@ export const CreateProjectForm = ({ onClose }: CreateProjectFormProps) => {
     createProjectMutation.error instanceof ApiError
       ? createProjectMutation.error.code
       : createProjectMutation.error instanceof TypeError
-        ? "NETWORK_ERROR"
-        : "UNKNOWN_ERROR";
+        ? CLIENT_ERROR_CODE.NETWORK_ERROR
+        : CLIENT_ERROR_CODE.UNKNOWN_ERROR;
 
   const errorMessage =
     createProjectMutation.error instanceof ApiError &&

@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { CircleAlertIcon, UsersIcon } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { CLIENT_ERROR_CODE } from "@/shared/constants";
 import { ApiError } from "@/shared/types/error";
 import { ScrumModalHeader } from "../../components/ScrumModalHeader";
 import type { ProjectDetailResponse } from "../../types";
@@ -42,8 +43,8 @@ export const InviteMemberForm = ({
     inviteMembersMutation.error instanceof ApiError
       ? inviteMembersMutation.error.code
       : inviteMembersMutation.error instanceof TypeError
-        ? "NETWORK_ERROR"
-        : "UNKNOWN_ERROR";
+        ? CLIENT_ERROR_CODE.NETWORK_ERROR
+        : CLIENT_ERROR_CODE.UNKNOWN_ERROR;
 
   const errorMessage =
     inviteMembersMutation.error instanceof ApiError &&

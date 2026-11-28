@@ -1,5 +1,7 @@
 import type { RouteObject } from "react-router-dom";
 import {
+  PbiDetailPage,
+  PbiListPage,
   ProjectLayout,
   ProjectOverviewPage,
   ProjectsPage,
@@ -35,7 +37,11 @@ export const scrumRoutes: RouteObject[] = [
       },
       {
         path: "pbis",
-        element: null,
+        element: <PbiListPage />,
+      },
+      {
+        path: "pbis/:pbiId",
+        element: <PbiDetailPage />,
       },
       {
         path: "tasks",

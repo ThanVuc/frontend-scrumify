@@ -3,12 +3,16 @@ import { PlusIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-import type { ProjectStat, ProjectStatIconType } from "../../types";
+import {
+  PROJECT_STAT_ICON,
+  type ProjectStat,
+  type ProjectStatIconType,
+} from "../../types";
 
 const STAT_DOT_COLOR_MAP: Record<ProjectStatIconType, string> = {
-  projects: "bg-indigo-400",
-  pbis: "bg-sky-400",
-  contributors: "bg-rose-400",
+  [PROJECT_STAT_ICON.PROJECTS]: "bg-indigo-400",
+  [PROJECT_STAT_ICON.PBIS]: "bg-sky-400",
+  [PROJECT_STAT_ICON.CONTRIBUTORS]: "bg-rose-400",
 };
 
 type ProjectsHeaderProps = {

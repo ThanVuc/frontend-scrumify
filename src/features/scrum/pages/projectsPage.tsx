@@ -10,12 +10,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { CLIENT_ERROR_CODE } from "@/shared/constants";
 import { ApiError } from "@/shared/types/error";
 import { CreateProjectDialog } from "../components/projects/CreateProjectDialog";
 import { ProjectCard } from "../components/projects/ProjectCard";
 import { ProjectsHeader } from "../components/projects/ProjectsHeader";
 import { useProjects } from "../hooks";
-import type { ProjectStat } from "../types";
+import { PROJECT_STAT_ICON, type ProjectStat } from "../types";
 
 export const ProjectsPage = () => {
   const { t } = useTranslation();
@@ -36,19 +37,19 @@ export const ProjectsPage = () => {
       id: "total-projects",
       value: items.length,
       label: t("projects.stats.project", { count: items.length }),
-      icon: "projects",
+      icon: PROJECT_STAT_ICON.PROJECTS,
     },
     {
       id: "active-pbis",
       value: activePBIs,
       label: t("projects.stats.activePbi", { count: activePBIs }),
-      icon: "pbis",
+      icon: PROJECT_STAT_ICON.PBIS,
     },
     {
       id: "contributors",
       value: uniqueMembers.size,
       label: t("projects.stats.contributor", { count: uniqueMembers.size }),
-      icon: "contributors",
+      icon: PROJECT_STAT_ICON.CONTRIBUTORS,
     },
   ];
 
@@ -56,8 +57,8 @@ export const ProjectsPage = () => {
     error instanceof ApiError
       ? error.code
       : error instanceof TypeError
-        ? "NETWORK_ERROR"
-        : "UNKNOWN_ERROR";
+        ? CLIENT_ERROR_CODE.NETWORK_ERROR
+        : CLIENT_ERROR_CODE.UNKNOWN_ERROR;
 
   return (
     <div className="mx-auto max-w-6xl space-y-4">
